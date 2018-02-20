@@ -11,7 +11,9 @@
 #import <FMDatabase.h>
 
 @interface FCoverViewController ()
-
+{
+    NSString * uid;
+}
 @end
 
 @implementation FCoverViewController
@@ -144,7 +146,7 @@
             NSString * strQuerry = @"select * from user";
             FMResultSet * result = [_db executeQuery:strQuerry];
             while([result next]){
-                NSString * uid = [result stringForColumn:@"uid"];
+                uid = [result stringForColumn:@"uid"];
                 
                 NSInteger uMissionIndex = [result intForColumn:@"missionIndex"];
                 
@@ -156,7 +158,7 @@
                 }
             }
             //如果没有找到，则插入一条新数据
-            if(!isFind){
+            if(!isFind && uid!=NULL){
                 NSString * strInsert = [@"insert into user values(" stringByAppendingFormat:@"'%@',%ld,0)",self.userID,self.missionIndex];
                 NSLog(@"strInsert：%@",strInsert);
                 NSLog(@"self.userID：%@",self.userID);
