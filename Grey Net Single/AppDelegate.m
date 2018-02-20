@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 //#import "VCRoot.h"
 #import "FCoverViewController.h"
+#import "IQKeyboardManager.h"
+
 
 @interface AppDelegate ()
 
@@ -24,7 +26,11 @@
     self.window.rootViewController = [[FCoverViewController alloc] init];
     
     [self.window makeKeyAndVisible];
-    
+    [IQKeyboardManager sharedManager].enable =YES;
+    [IQKeyboardManager sharedManager].preventShowingBottomBlankSpace = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    [IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+
     return YES;
 }
 

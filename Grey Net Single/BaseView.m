@@ -30,7 +30,7 @@
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [self.navigationController setToolbarHidden:NO];
+//    [self.navigationController setToolbarHidden:NO];
     //设置bar透明
 //    UIImage * imageTranslucent = [[UIImage alloc]init];
 //        UINavigationBar * bar = self.navigationController.navigationBar;

@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "BaseView.h"
 
-@interface ConsoleView : BaseView
-
+@interface ConsoleView : BaseView <UITextViewDelegate>
+{
+    @protected
+    UILabel *titleLabel;
+    UILabel* owner;
+}
+@property (nonatomic,strong) UITextView * commandTV;
 @end

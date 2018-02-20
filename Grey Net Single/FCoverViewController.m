@@ -89,7 +89,7 @@
     
     //button goto rootView
     UIButton* functionButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    functionButton.frame = CGRectMake(rx.size.width/2-50, rx.size.height - 100, 100, 100);
+    functionButton.frame = CGRectMake(rx.size.width/2-50, rx.size.height - 125, 100, 100);
     [functionButton setImage:[UIImage imageNamed:@"functionButton.png"] forState:UIControlStateNormal];
     
     //set gesture interactive
@@ -129,7 +129,7 @@
         NSLog(@"数据库打开成功");
     }
     //create a sql str
-    NSString* strCreateTable = @"create table if not exists user(uid varchar(20) primary key, missionIndex integer, missonProgress integer)";
+    NSString* strCreateTable = @"create table if not exists user(uid varchar(20) primary key, missionIndex integer, missionProgress integer)";
     NSString* strCreateTableMission = @"create table if not exists mission(id integer primary key, missionIndex integer, missionProgress integer,mail text,title text,name text,ip text,port text)";
     
     BOOL isCreate = [_db executeUpdate:strCreateTable];
@@ -148,7 +148,7 @@
                 
                 NSInteger uMissionIndex = [result intForColumn:@"missionIndex"];
                 
-                NSInteger uMissionProgress = [result intForColumn:@"missonProgress"];
+                NSInteger uMissionProgress = [result intForColumn:@"missionProgress"];
                 
                 NSLog(@"user id:%@, missionIndex:%ld, %ld",uid,uMissionIndex,uMissionProgress);
                 if([self.userID isEqualToString:uid]){
@@ -187,12 +187,12 @@
 - (void) keyboardWillShow:(NSNotification *)notification {
     //获取键盘高度，在不同设备上，以及中英文下是不同的
     CGFloat kbHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
-    NSLog(@"kbHeight%f",kbHeight);
+//    NSLog(@"kbHeight%f",kbHeight);
     //计算出键盘顶端到inputTextView panel底端的距离(加上自定义的缓冲距离INTERVAL_KEYBOARD)
     CGFloat offset = (self.textY+self.textHeight+20) - (self.view.frame.size.height - kbHeight);
-    NSLog(@"offset%f",offset);
-    NSLog(@"y:%f height:%f",self.textY,self.textHeight);
-    NSLog(@"frame.size.height:%f",self.view.frame.size.height);
+//    NSLog(@"offset%f",offset);
+//    NSLog(@"y:%f height:%f",self.textY,self.textHeight);
+//    NSLog(@"frame.size.height:%f",self.view.frame.size.height);
 
     // 取得键盘的动画时间，这样可以在视图上移的时候更连贯
     double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];

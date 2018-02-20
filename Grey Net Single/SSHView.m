@@ -7,6 +7,7 @@
 //
 
 #import "SSHView.h"
+#import "SSHConsoleView.h"
 #import <FMDatabase.h>
 
 @interface SSHView ()
@@ -99,17 +100,24 @@
             while([result next]){
                 NSString * uid = [result stringForColumn:@"uid"];
                 NSInteger uMissionIndex = [result intForColumn:@"missionIndex"];
-                NSInteger uMissionProgress = [result intForColumn:@"missonProgress"];
+                NSInteger uMissionProgress = [result intForColumn:@"missionProgress"];
                 NSLog(@"SSHView ！！！ user id:%@, missionIndex:%ld, missionProgress：%ld",uid,uMissionIndex,uMissionProgress);
                 _mIndex = uMissionIndex;
                 _mProgress = uMissionProgress;
+                NSLog(@"SSHView ！！！ _mIndex:%ld, _mProgress:%ld",_mIndex,_mProgress);
+
             }
-            strQuerry = [@"select * from mission where missionIndex = " stringByAppendingFormat:@"%ld and missionProgress = %ld",_mIndex,_mProgress ];
+//            strQuerry = [@"select * from mission where missionIndex = " stringByAppendingFormat:@"%ld and missionProgress = %ld",_mIndex,_mProgress ];
+            strQuerry = @"select * from mission";
             result = [_db executeQuery:strQuerry];
              while([result next]){
-                 _ipdb = [result stringForColumn:@"ip"];
-                 _portdb = [result stringForColumn:@"port"];
-                 NSLog(@"SSHView ！！！ IP:%@, Port:%@",_ip,_port);
+                 if([result intForColumn:@"missionIndex"] == _mIndex && [result intForColumn:@"missionProgress"] == _mProgress){
+                     _ipdb = [result stringForColumn:@"ip"];
+                     _portdb = [result stringForColumn:@"port"];
+                     NSLog(@"SSHView ！！！ IP:%@, Port:%@",_ip,_port);
+                 } else{
+                     NSLog(@"SSHView ！！！ can not find ip with these missionIndex:%d, _mIndex:%ld",[result intForColumn:@"missionIndex"],_mIndex);
+                 }
              }
         }
     }
@@ -130,21 +138,32 @@
     [callbackView setFont:[UIFont systemFontOfSize:27]];
     //    [callbackView setBackgroundColor:[UIColor whiteColor]];
     [self.view addSubview:callbackView];
-    if(![_ipdb isEqualToString:_ip]){
+    if(![_ipdb isEqualToString:_ip] || ![_portdb isEqualToString:_port]){
         callbackView.text = @"Uncorrect Input";
-        NSLog(@"Uncorrect Input==================");
+        NSLog(@"Uncorrect Input _ipdb:%@ and _portdb:%@",_ipdb,_portdb);
+        NSLog(@"Uncorrect Input _ip:%@ and _port:%@",_ip,_port);
+    } else {
+        callbackView.text = @"Correct Input";
+        NSLog(@"correct Input _ipdb:%@ and _portdb:%@",_ipdb,_portdb);
+        NSLog(@"correct Input _ip:%@ and _port:%@",_ip,_port);
+        //跳转
+        SSHConsoleView * vc = [[SSHConsoleView alloc]init];
+        [self.navigationController pushViewController:vc animated:YES];
+//        [self.navigationController setToolbarHidden:NO];
+        NSLog(@"go to SSHConsoleView!");
+
     }
-    //跳转
-    
 }
 //按回车将键盘回收
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if(textField == _portTF){
         [_portTF resignFirstResponder];
         _port = _portTF.text;
+        _ip = _ipTF.text;
         NSLog(@"成功收回键盘");
     } else if(textField == _ipTF){
         [_ipTF resignFirstResponder];
+        _port = _portTF.text;
         _ip = _ipTF.text;
     }
     return YES;

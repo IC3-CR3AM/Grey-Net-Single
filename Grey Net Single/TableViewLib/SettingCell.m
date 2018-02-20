@@ -23,6 +23,7 @@
 
 - (UIImageView *)arrowView{
     if (_arrowView == nil){
+        //rotate 旋转
         UIImage *img = [UIImage imageNamed:@"00.jpg"];
 //        UIImageOrientation a0 = img.imageOrientation;
         UIImage *image = [UIImage imageWithCGImage:img.CGImage scale:2.0 orientation:UIImageOrientationDown];

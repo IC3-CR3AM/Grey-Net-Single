@@ -80,9 +80,13 @@
     self.toolbarItems = arrayBtn;
 }
 
+-(void) viewWillAppear:(BOOL)animated{
+    [self.navigationController setToolbarHidden:NO];
+}
 -(void) inboxView{
     InboxView * vc = [[InboxView alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
+//    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController setToolbarHidden:YES];
     NSLog(@"go to InboxView!");
     //设置bar透明
@@ -97,6 +101,7 @@
     ConsoleView * vc = [[ConsoleView alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
     [self.navigationController setToolbarHidden:YES];
+//    vc.hidesBottomBarWhenPushed = YES;
     NSLog(@"go to ConsoleView!");
     //设置bar透明
     //    UIImage * imageTranslucent = [[UIImage alloc]init];
@@ -172,6 +177,7 @@
             }];
         } else {
             [self.navigationController pushViewController:VC animated:YES];
+//            VC.hidesBottomBarWhenPushed = YES;
             [self.navigationController setToolbarHidden:YES];
             NSLog(@"从mainview切换到 navigarion");
         }

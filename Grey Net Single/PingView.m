@@ -65,7 +65,7 @@
     //textView
     _textReply = [[UITextView alloc]init];
     _textReply.frame = CGRectMake(40, 180, self.view.bounds.size.width -80, self.view.bounds.size.height/15*11);
-    _textReply.text = @"It's a View test blablabalbalbalablabalbalbalbalbalababalbalbalabalbalb";
+//    _textReply.text = @"It's a View test blablabalbalbalablabalbalbalbalbalababalbalbalabalbalb";
     _textReply.textColor = [UIColor whiteColor];
     _textReply.backgroundColor = [UIColor clearColor];
     _textReply.font = [UIFont systemFontOfSize:27];
