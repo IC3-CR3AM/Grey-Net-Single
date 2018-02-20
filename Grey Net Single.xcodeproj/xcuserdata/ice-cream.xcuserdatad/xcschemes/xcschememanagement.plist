@@ -7,7 +7,25 @@
 		<key>Grey Net Single.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D86E22421FFC855D009EA637</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D86E225A1FFC855D009EA637</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D86E22651FFC855D009EA637</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
