@@ -31,7 +31,6 @@
 		D86E22861FFC87D7009EA637 /* functionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E227F1FFC87D7009EA637 /* functionButton.png */; };
 		D8EA19A820390D9B009B2F77 /* InboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EA19A720390D9B009B2F77 /* InboxView.m */; };
 		D8EA19AB20390FA7009B2F77 /* ConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EA19AA20390FA7009B2F77 /* ConsoleView.m */; };
-		D8F1CF47203B2C6A0038A345 /* greyNetDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D8F1CF46203B2C690038A345 /* greyNetDB.db */; };
 		D8F7157D202BF35E00249E77 /* SettingArrowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F7157C202BF35E00249E77 /* SettingArrowModel.m */; };
 		D8F71583202C1AF600249E77 /* SettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71582202C1AF600249E77 /* SettingCell.m */; };
 		D8F71586202C1D3400249E77 /* SettingSwitchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F71585202C1D3400249E77 /* SettingSwitchModel.m */; };
@@ -105,7 +104,6 @@
 		D8EA19A720390D9B009B2F77 /* InboxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InboxView.m; sourceTree = "<group>"; };
 		D8EA19A920390FA7009B2F77 /* ConsoleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsoleView.h; sourceTree = "<group>"; };
 		D8EA19AA20390FA7009B2F77 /* ConsoleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConsoleView.m; sourceTree = "<group>"; };
-		D8F1CF46203B2C690038A345 /* greyNetDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = greyNetDB.db; sourceTree = "<group>"; };
 		D8F7157B202BF35E00249E77 /* SettingArrowModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingArrowModel.h; sourceTree = "<group>"; };
 		D8F7157C202BF35E00249E77 /* SettingArrowModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingArrowModel.m; sourceTree = "<group>"; };
 		D8F71581202C1AF600249E77 /* SettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingCell.h; sourceTree = "<group>"; };
@@ -231,7 +229,6 @@
 		D86E22451FFC855D009EA637 /* Grey Net Single */ = {
 			isa = PBXGroup;
 			children = (
-				D8F1CF46203B2C690038A345 /* greyNetDB.db */,
 				D81E3A612039A731002A7B37 /* DKSBadge */,
 				D80A19292036ED360082CABD /* TableViewLib */,
 				D86E22781FFC87AE009EA637 /* images */,
@@ -397,7 +394,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8F1CF47203B2C6A0038A345 /* greyNetDB.db in Resources */,
 				D86E22811FFC87D7009EA637 /* backGround.png in Resources */,
 				D86E22831FFC87D7009EA637 /* 00.jpg in Resources */,
 				D86E22801FFC87D7009EA637 /* 左右键.png in Resources */,
