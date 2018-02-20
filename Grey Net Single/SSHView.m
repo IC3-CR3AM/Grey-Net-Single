@@ -154,12 +154,12 @@
 - (void) keyboardWillShow:(NSNotification *)notification {
     //获取键盘高度，在不同设备上，以及中英文下是不同的
     CGFloat kbHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
-    NSLog(@"kbHeight%f",kbHeight);
+//    NSLog(@"kbHeight%f",kbHeight);
     //计算出键盘顶端到inputTextView panel底端的距离(加上自定义的缓冲距离INTERVAL_KEYBOARD)
     CGFloat offset = (_ipTF.frame.origin.y+_ipTF.frame.size.height+20) - (self.view.frame.size.height - kbHeight);
-    NSLog(@"offset%f",offset);
-    NSLog(@"y:%f height:%f",_ipTF.frame.origin.y,_ipTF.frame.size.height);
-    NSLog(@"frame.size.height:%f",self.view.frame.size.height);
+//    NSLog(@"offset%f",offset);
+//    NSLog(@"y:%f height:%f",_ipTF.frame.origin.y,_ipTF.frame.size.height);
+//    NSLog(@"frame.size.height:%f",self.view.frame.size.height);
 
     // 取得键盘的动画时间，这样可以在视图上移的时候更连贯
     double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];

@@ -69,6 +69,7 @@
     _textReply.textColor = [UIColor whiteColor];
     _textReply.backgroundColor = [UIColor clearColor];
     _textReply.font = [UIFont systemFontOfSize:27];
+    _textReply.editable = NO;
     [self.view addSubview:_textReply];
     //-------------------------------数据库部分---------------------------------------------------------
     //NSUserdefault 当前用户对象
@@ -93,22 +94,30 @@
             while([result next]){
                 NSString * uid = [result stringForColumn:@"uid"];
                 NSInteger uMissionIndex = [result intForColumn:@"missionIndex"];
-                NSInteger uMissionProgress = [result intForColumn:@"missonProgress"];
-                NSLog(@"SSHView ！！！ user id:%@, missionIndex:%ld, missionProgress：%ld",uid,uMissionIndex,uMissionProgress);
+                NSInteger uMissionProgress = [result intForColumn:@"missionProgress"];
+                NSLog(@"PingView ！！！ user id:%@, missionIndex:%ld, missionProgress：%ld",uid,uMissionIndex,uMissionProgress);
                 _mIndex = uMissionIndex;
                 _mProgress = uMissionProgress;
             }
-            strQuerry = [@"select * from mission where missionIndex = " stringByAppendingFormat:@"%ld and missionProgress = %ld",_mIndex,_mProgress ];
+//            strQuerry = [@"select * from mission where missionIndex = " stringByAppendingFormat:@"%ld",_mIndex];
+            strQuerry = @"select * from mission";
+            NSLog(@"strQuerry:%@",strQuerry);
+//            NSLog(@"PingView ！！！ missionIndex:%ld, missionProgress：%ld",_mIndex,_mProgress);
             result = [_db executeQuery:strQuerry];
+//            NSLog(@"result:%@",result);
             while([result next]){
-                _ipdb = [result stringForColumn:@"ip"];
-                NSLog(@"SSHView ！！！ IP:%@",_ipdb);
+                if([result intForColumn:@"missionIndex"] == _mIndex && [result intForColumn:@"missionProgress"] == _mProgress){
+                    _ipdb = [result stringForColumn:@"ip"];
+                    NSLog(@"SSHView ！！！ IP:%@",_ipdb);
+                } else{
+                    NSLog(@"SSHView ！！！ can not find IP");
+                }
             }
         }
     }
     //close db
     BOOL isClose = [_db close];
-    NSLog(@"成功关闭数据库：%d",isClose);
+    NSLog(@"关闭数据库：%d",isClose);
 }
 //按回车将键盘回收
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
@@ -116,8 +125,13 @@
         [_ipTF resignFirstResponder];
     }
     if([_ipTF.text isEqualToString:_ipdb]){
+        NSLog(@"ip正确");
         _textReply.text = @"64 bytes from 111.13.100.92: icmp_seq=0 ttl=54 time=28.323 ms\n64 bytes from 111.13.100.92: icmp_seq=1 ttl=54 time=29.028 ms\n64 bytes from 111.13.100.92: icmp_seq=2 ttl=54 time=27.733 ms\n64 bytes from 111.13.100.92: icmp_seq=3 ttl=54 time=28.094 ms\n--- www.a.shifen.com ping statistics ---\n4 packets transmitted, 4 packets received, 0.0% packet loss\nround-trip min/avg/max/stddev = 27.531/29.116/33.621/1.668 ms";
+    } else {
+        NSLog(@"ip错误 _ipTF.text:%@, _ipdb:%@",_ipTF.text,_ipdb);
+        _textReply.text = @"Uncorrect IP";
     }
+    NSLog(@"回收键盘");
     return YES;
 }
 
@@ -125,14 +139,11 @@
 - (void) keyboardWillShow:(NSNotification *)notification {
     //获取键盘高度，在不同设备上，以及中英文下是不同的
     CGFloat kbHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
-    NSLog(@"kbHeight%f",kbHeight);
+//    NSLog(@"kbHeight%f",kbHeight);
     //计算出键盘顶端到inputTextView panel底端的距离(加上自定义的缓冲距离INTERVAL_KEYBOARD)
     CGFloat offset = (_ipTF.frame.origin.y+_ipTF.frame.size.height+20) - (self.view.frame.size.height - kbHeight);
-
-    
     // 取得键盘的动画时间，这样可以在视图上移的时候更连贯
     double duration = [[notification.userInfo objectForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
     //将视图上移计算好的偏移
     if(offset > 0) {
         [UIView animateWithDuration:duration animations:^{
