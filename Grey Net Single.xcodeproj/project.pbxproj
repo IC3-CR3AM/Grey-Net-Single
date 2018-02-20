@@ -30,6 +30,8 @@
 		D82CD81A203C727A00139B0C /* IQUIView+Hierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD806203C727900139B0C /* IQUIView+Hierarchy.m */; };
 		D82CD81B203C727A00139B0C /* IQUIViewController+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD80B203C727900139B0C /* IQUIViewController+Additions.m */; };
 		D82CD81C203C727A00139B0C /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD80D203C727900139B0C /* IQKeyboardReturnKeyHandler.m */; };
+		D82CD81F203C886400139B0C /* DownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD81E203C886400139B0C /* DownloadView.m */; };
+		D82CD822203C8B4900139B0C /* WKProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */; };
 		D86A64872037C11B0016244B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D86A64862037C11B0016244B /* libsqlite3.tbd */; };
 		D86A648A20387BBD0016244B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A648920387BBD0016244B /* BaseView.m */; };
 		D86E0E152029D23F0075AAE2 /* FCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86E0E142029D23F0075AAE2 /* FCoverViewController.m */; };
@@ -125,6 +127,10 @@
 		D82CD80B203C727900139B0C /* IQUIViewController+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIViewController+Additions.m"; sourceTree = "<group>"; };
 		D82CD80C203C727900139B0C /* IQUIView+Hierarchy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+Hierarchy.h"; sourceTree = "<group>"; };
 		D82CD80D203C727900139B0C /* IQKeyboardReturnKeyHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyboardReturnKeyHandler.m; sourceTree = "<group>"; };
+		D82CD81D203C886400139B0C /* DownloadView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadView.h; sourceTree = "<group>"; };
+		D82CD81E203C886400139B0C /* DownloadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadView.m; sourceTree = "<group>"; };
+		D82CD820203C8B4900139B0C /* WKProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKProgressBarLayer.h; sourceTree = "<group>"; };
+		D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKProgressBarLayer.m; sourceTree = "<group>"; };
 		D86A64862037C11B0016244B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D86A648820387BBD0016244B /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		D86A648920387BBD0016244B /* BaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
@@ -356,6 +362,8 @@
 		D86E22451FFC855D009EA637 /* Grey Net Single */ = {
 			isa = PBXGroup;
 			children = (
+				D82CD820203C8B4900139B0C /* WKProgressBarLayer.h */,
+				D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */,
 				D82CD7E9203C727900139B0C /* IQKeyboardManager */,
 				D81E3A612039A731002A7B37 /* DKSBadge */,
 				D80A19292036ED360082CABD /* TableViewLib */,
@@ -379,6 +387,8 @@
 				D81E3A6F2039DDD2002A7B37 /* SSHView.m */,
 				D82CD7E6203C5FF100139B0C /* SSHConsoleView.h */,
 				D82CD7E7203C5FF100139B0C /* SSHConsoleView.m */,
+				D82CD81D203C886400139B0C /* DownloadView.h */,
+				D82CD81E203C886400139B0C /* DownloadView.m */,
 			);
 			path = "Grey Net Single";
 			sourceTree = "<group>";
@@ -612,6 +622,7 @@
 				D8EA19A820390D9B009B2F77 /* InboxView.m in Sources */,
 				D81E3A6D2039CBCA002A7B37 /* PingView.m in Sources */,
 				D82CD817203C727A00139B0C /* IQUIWindow+Hierarchy.m in Sources */,
+				D82CD822203C8B4900139B0C /* WKProgressBarLayer.m in Sources */,
 				D82CD80F203C727A00139B0C /* IQToolbar.m in Sources */,
 				D8F7158C202C1D8400249E77 /* Group.m in Sources */,
 				D81E3A692039A731002A7B37 /* UITabBar+DKSTabBar.m in Sources */,
@@ -622,6 +633,7 @@
 				D82CD815203C727A00139B0C /* IQKeyboardManager.m in Sources */,
 				D8F71592202C1EF800249E77 /* SettingTableViewController.m in Sources */,
 				D82CD81A203C727A00139B0C /* IQUIView+Hierarchy.m in Sources */,
+				D82CD81F203C886400139B0C /* DownloadView.m in Sources */,
 				D82CD81B203C727A00139B0C /* IQUIViewController+Additions.m in Sources */,
 				D8EA19AB20390FA7009B2F77 /* ConsoleView.m in Sources */,
 				D8F7157D202BF35E00249E77 /* SettingArrowModel.m in Sources */,

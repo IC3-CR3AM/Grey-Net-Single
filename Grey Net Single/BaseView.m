@@ -28,15 +28,16 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(void)viewWillDisappear:(BOOL)animated{
-    [super viewWillDisappear:animated];
+//-(void)viewWillDisappear:(BOOL)animated{
+//    [super viewWillDisappear:animated];
 //    [self.navigationController setToolbarHidden:NO];
     //设置bar透明
 //    UIImage * imageTranslucent = [[UIImage alloc]init];
 //        UINavigationBar * bar = self.navigationController.navigationBar;
 //    [bar setBackgroundImage:imageTranslucent forBarMetrics:UIBarMetricsDefault];
 //    bar.barStyle = UIBarStyleBlackOpaque;
-}
+//}
+
 /*
  #pragma mark - Navigation
  

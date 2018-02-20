@@ -10,4 +10,5 @@
 @interface BaseTableViewController : UITableViewController
 /**1.1存放模型数据,这个属性必须方法.h文件中,这样继承它的子类才可以调用*/
 @property (strong, nonatomic) NSMutableArray *dataArray;
+@property UIButton * inboxRedPointBtn;
 @end

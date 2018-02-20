@@ -51,16 +51,16 @@
     self.navigationController.toolbar.translucent = NO;
     
     //小红点 red point
-    UIButton * btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btn setTitle:@"Inbox" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor lightTextColor] forState:UIControlStateHighlighted];
+    _inboxRedPointBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_inboxRedPointBtn setTitle:@"Inbox" forState:UIControlStateNormal];
+    [_inboxRedPointBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_inboxRedPointBtn setTitleColor:[UIColor lightTextColor] forState:UIControlStateHighlighted];
 //    btn.titleLabel.font = [UIFont systemFontOfSize:17];
-    btn.frame = CGRectMake(0, 0, 47, 25);
-    [btn showBadge];
-    [btn addTarget:self action:@selector(inboxView) forControlEvents:UIControlEventTouchUpInside];
+    _inboxRedPointBtn.frame = CGRectMake(0, 0, 47, 25);
+    [_inboxRedPointBtn showBadge];
+    [_inboxRedPointBtn addTarget:self action:@selector(inboxView) forControlEvents:UIControlEventTouchUpInside];
     //工具栏按钮
-    UIBarButtonItem * btnInbox = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    UIBarButtonItem * btnInbox = [[UIBarButtonItem alloc]initWithCustomView:_inboxRedPointBtn];
     UIBarButtonItem * btnConsole = [[UIBarButtonItem alloc] initWithTitle:@"Console" style:UIBarButtonItemStylePlain target:self action:@selector(consoleView)];
 //    UIBarButtonItem * btnInbox = [[UIBarButtonItem alloc] initWithTitle:@"Inbox" style:UIBarButtonItemStylePlain target:self action:@selector(inboxView)];
     UIBarButtonItem * flexibleSpaceBarButton = [[UIBarButtonItem alloc]
@@ -84,9 +84,9 @@
     [self.navigationController setToolbarHidden:NO];
 }
 -(void) inboxView{
+    [_inboxRedPointBtn hidenBadge];
     InboxView * vc = [[InboxView alloc]init];
     [self.navigationController pushViewController:vc animated:YES];
-//    vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController setToolbarHidden:YES];
     NSLog(@"go to InboxView!");
     //设置bar透明
