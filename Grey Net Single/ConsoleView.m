@@ -8,6 +8,8 @@
 
 #import "ConsoleView.h"
 #import "IQKeyboardManager.h"
+#import "PingView.h"
+#import "SSHView.h"
 #define SCREEN_W [UIScreen mainScreen].bounds.size.width    //屏幕宽度
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height   //屏幕高度
 
@@ -46,7 +48,7 @@
     _commandTV.textColor = [UIColor whiteColor];
     _commandTV.backgroundColor = [UIColor clearColor];
     _commandTV.font = [UIFont systemFontOfSize:27];
-    _commandTV.text = @"";
+    _commandTV.text = @"Please enter your command";
     [_commandTV setDelegate:self];
 //    [_commandTV setEditable:NO];
     [self.view addSubview:_commandTV];
@@ -66,14 +68,23 @@ replacementText:(NSString *)text
     //如果为回车则将键盘收起
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
+        NSLog(@"text get: %@", textView.text);
+        //--------------------------------console通过命令切换到各个页面------------------------------------
+        if([textView.text hasPrefix:@"Ping"] || [textView.text hasPrefix:@"ping"]) {
+            NSLog(@"包含Ping字符");
+            PingView * vc = [[PingView alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        } else if ([textView.text hasPrefix:@"ssh"] || [textView.text hasPrefix:@"SSH"] || [textView.text hasPrefix:@"Ssh"]){
+            NSLog(@"包含ssh字符");
+            SSHView * vc = [[SSHView alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+        else {
+            _commandTV.text = [@"Can't understand command: " stringByAppendingFormat:@"%@",textView.text];
+        }
         return NO;
     }
     [self autoAdjustTo:textView];
-//    CGFloat kbHeight = [[notification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
-//    UITextPosition * position = _commandTV.selectedTextRange.start;
-//    if(){
-//
-//    }
     return YES;
 }
 //键盘出现
@@ -107,7 +118,7 @@ replacementText:(NSString *)text
     CGPoint cursorPosition = [textView caretRectForPosition:textView.selectedTextRange.end].origin;
     CGPoint point = [textView convertPoint:cursorPosition toView:[UIApplication sharedApplication].keyWindow];
     
-    NSLog(@"+++++++++++++++++光标坐标：%f   键盘坐标:%f++++++++++++++",point.y+15,kbY);
+//    NSLog(@"+++++++++++++++++光标坐标：%f   键盘坐标:%f++++++++++++++",point.y+15,kbY);
     
     //5.判断
     //当textView 的frame比较大，上移后还会被键盘遮挡的话
@@ -117,8 +128,8 @@ replacementText:(NSString *)text
             //计算textView上内边距需要移动的高度
             [UIView animateWithDuration:0.3 animations:^{
                 CGFloat move = point.y + 15 - kbY - textView.textContainerInset.top;
-                NSLog(@"=======================%f==============================",move);
-                NSLog(@"---------------%f-----------------",textView.textContainerInset.top);
+//                NSLog(@"=======================%f==============================",move);
+//                NSLog(@"---------------%f-----------------",textView.textContainerInset.top);
                 //这里move-10是为了光标与键盘边界有点距离，更美观
                 textView.textContainerInset = UIEdgeInsetsMake(-move-10-5, 5, 5, 5);
             }];
