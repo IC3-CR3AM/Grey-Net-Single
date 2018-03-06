@@ -47,6 +47,24 @@
 		D86E22841FFC87D7009EA637 /* bar背景.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E227D1FFC87D6009EA637 /* bar背景.png */; };
 		D86E22851FFC87D7009EA637 /* progress底色.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E227E1FFC87D6009EA637 /* progress底色.png */; };
 		D86E22861FFC87D7009EA637 /* functionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E227F1FFC87D7009EA637 /* functionButton.png */; };
+		D87779492042AD5E0008D5FF /* MissionFileList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87779482042AD5E0008D5FF /* MissionFileList.plist */; };
+		D877794C2042AE4C0008D5FF /* CommandList.m in Sources */ = {isa = PBXBuildFile; fileRef = D877794B2042AE4C0008D5FF /* CommandList.m */; };
+		D8889C77204E980100E76A69 /* MissionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8889C76204E980100E76A69 /* MissionList.plist */; };
+		D8889C7A204E9D1000E76A69 /* InputMissionInDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D8889C79204E9D1000E76A69 /* InputMissionInDatabase.m */; };
+		D8889C7C204ED54F00E76A69 /* app.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C7B204ED54F00E76A69 /* app.jpg */; };
+		D8889C87204EDDBC00E76A69 /* app_gaitubao_com_40x40.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C7E204EDDBB00E76A69 /* app_gaitubao_com_40x40.jpg */; };
+		D8889C88204EDDBC00E76A69 /* app_gaitubao_com_58x58.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C7F204EDDBB00E76A69 /* app_gaitubao_com_58x58.jpg */; };
+		D8889C89204EDDBC00E76A69 /* app_gaitubao_com_80x80.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C80204EDDBC00E76A69 /* app_gaitubao_com_80x80.jpg */; };
+		D8889C8A204EDDBC00E76A69 /* app_gaitubao_com_76x76.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C81204EDDBC00E76A69 /* app_gaitubao_com_76x76.jpg */; };
+		D8889C8B204EDDBC00E76A69 /* app_gaitubao_com_20x20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C82204EDDBC00E76A69 /* app_gaitubao_com_20x20.jpg */; };
+		D8889C8C204EDDBC00E76A69 /* app_gaitubao_com_152x152.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C83204EDDBC00E76A69 /* app_gaitubao_com_152x152.jpg */; };
+		D8889C8D204EDDBC00E76A69 /* app_gaitubao_com_167x167.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C84204EDDBC00E76A69 /* app_gaitubao_com_167x167.jpg */; };
+		D8889C8E204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C85204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg */; };
+		D8889C8F204EDDBC00E76A69 /* app_gaitubao_com_1024x1024.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C86204EDDBC00E76A69 /* app_gaitubao_com_1024x1024.jpg */; };
+		D8889C94204EDFEE00E76A69 /* app_gaitubao_com_60x60.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C90204EDFED00E76A69 /* app_gaitubao_com_60x60.jpg */; };
+		D8889C95204EDFEE00E76A69 /* app_gaitubao_com_120x120.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C91204EDFEE00E76A69 /* app_gaitubao_com_120x120.jpg */; };
+		D8889C96204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C92204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg */; };
+		D8889C97204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C93204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg */; };
 		D8EA19A820390D9B009B2F77 /* InboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EA19A720390D9B009B2F77 /* InboxView.m */; };
 		D8EA19AB20390FA7009B2F77 /* ConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EA19AA20390FA7009B2F77 /* ConsoleView.m */; };
 		D8F7157D202BF35E00249E77 /* SettingArrowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8F7157C202BF35E00249E77 /* SettingArrowModel.m */; };
@@ -155,6 +173,26 @@
 		D86E227D1FFC87D6009EA637 /* bar背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar背景.png"; sourceTree = "<group>"; };
 		D86E227E1FFC87D6009EA637 /* progress底色.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "progress底色.png"; sourceTree = "<group>"; };
 		D86E227F1FFC87D7009EA637 /* functionButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = functionButton.png; sourceTree = "<group>"; };
+		D87779482042AD5E0008D5FF /* MissionFileList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MissionFileList.plist; sourceTree = "<group>"; };
+		D877794A2042AE4C0008D5FF /* CommandList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandList.h; sourceTree = "<group>"; };
+		D877794B2042AE4C0008D5FF /* CommandList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandList.m; sourceTree = "<group>"; };
+		D8889C76204E980100E76A69 /* MissionList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MissionList.plist; sourceTree = "<group>"; };
+		D8889C78204E9D1000E76A69 /* InputMissionInDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputMissionInDatabase.h; sourceTree = "<group>"; };
+		D8889C79204E9D1000E76A69 /* InputMissionInDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputMissionInDatabase.m; sourceTree = "<group>"; };
+		D8889C7B204ED54F00E76A69 /* app.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app.jpg; sourceTree = "<group>"; };
+		D8889C7E204EDDBB00E76A69 /* app_gaitubao_com_40x40.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_40x40.jpg; sourceTree = "<group>"; };
+		D8889C7F204EDDBB00E76A69 /* app_gaitubao_com_58x58.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_58x58.jpg; sourceTree = "<group>"; };
+		D8889C80204EDDBC00E76A69 /* app_gaitubao_com_80x80.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_80x80.jpg; sourceTree = "<group>"; };
+		D8889C81204EDDBC00E76A69 /* app_gaitubao_com_76x76.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_76x76.jpg; sourceTree = "<group>"; };
+		D8889C82204EDDBC00E76A69 /* app_gaitubao_com_20x20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_20x20.jpg; sourceTree = "<group>"; };
+		D8889C83204EDDBC00E76A69 /* app_gaitubao_com_152x152.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_152x152.jpg; sourceTree = "<group>"; };
+		D8889C84204EDDBC00E76A69 /* app_gaitubao_com_167x167.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_167x167.jpg; sourceTree = "<group>"; };
+		D8889C85204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_29x29.jpg; sourceTree = "<group>"; };
+		D8889C86204EDDBC00E76A69 /* app_gaitubao_com_1024x1024.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_1024x1024.jpg; sourceTree = "<group>"; };
+		D8889C90204EDFED00E76A69 /* app_gaitubao_com_60x60.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_60x60.jpg; sourceTree = "<group>"; };
+		D8889C91204EDFEE00E76A69 /* app_gaitubao_com_120x120.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_120x120.jpg; sourceTree = "<group>"; };
+		D8889C92204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_180x180.jpg; sourceTree = "<group>"; };
+		D8889C93204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = app_gaitubao_com_87x87.jpg; sourceTree = "<group>"; };
 		D8EA19A620390D9B009B2F77 /* InboxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InboxView.h; sourceTree = "<group>"; };
 		D8EA19A720390D9B009B2F77 /* InboxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InboxView.m; sourceTree = "<group>"; };
 		D8EA19A920390FA7009B2F77 /* ConsoleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConsoleView.h; sourceTree = "<group>"; };
@@ -367,6 +405,7 @@
 				D82CD7E9203C727900139B0C /* IQKeyboardManager */,
 				D81E3A612039A731002A7B37 /* DKSBadge */,
 				D80A19292036ED360082CABD /* TableViewLib */,
+				D8889C7D204EDDAB00E76A69 /* icon */,
 				D86E22781FFC87AE009EA637 /* images */,
 				D86E22461FFC855D009EA637 /* AppDelegate.h */,
 				D86E22471FFC855D009EA637 /* AppDelegate.m */,
@@ -389,6 +428,12 @@
 				D82CD7E7203C5FF100139B0C /* SSHConsoleView.m */,
 				D82CD81D203C886400139B0C /* DownloadView.h */,
 				D82CD81E203C886400139B0C /* DownloadView.m */,
+				D877794A2042AE4C0008D5FF /* CommandList.h */,
+				D877794B2042AE4C0008D5FF /* CommandList.m */,
+				D8889C78204E9D1000E76A69 /* InputMissionInDatabase.h */,
+				D8889C79204E9D1000E76A69 /* InputMissionInDatabase.m */,
+				D87779482042AD5E0008D5FF /* MissionFileList.plist */,
+				D8889C76204E980100E76A69 /* MissionList.plist */,
 			);
 			path = "Grey Net Single";
 			sourceTree = "<group>";
@@ -423,6 +468,27 @@
 				D86E227E1FFC87D6009EA637 /* progress底色.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		D8889C7D204EDDAB00E76A69 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				D8889C7B204ED54F00E76A69 /* app.jpg */,
+				D8889C90204EDFED00E76A69 /* app_gaitubao_com_60x60.jpg */,
+				D8889C93204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg */,
+				D8889C91204EDFEE00E76A69 /* app_gaitubao_com_120x120.jpg */,
+				D8889C92204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg */,
+				D8889C82204EDDBC00E76A69 /* app_gaitubao_com_20x20.jpg */,
+				D8889C85204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg */,
+				D8889C7E204EDDBB00E76A69 /* app_gaitubao_com_40x40.jpg */,
+				D8889C7F204EDDBB00E76A69 /* app_gaitubao_com_58x58.jpg */,
+				D8889C81204EDDBC00E76A69 /* app_gaitubao_com_76x76.jpg */,
+				D8889C80204EDDBC00E76A69 /* app_gaitubao_com_80x80.jpg */,
+				D8889C83204EDDBC00E76A69 /* app_gaitubao_com_152x152.jpg */,
+				D8889C84204EDDBC00E76A69 /* app_gaitubao_com_167x167.jpg */,
+				D8889C86204EDDBC00E76A69 /* app_gaitubao_com_1024x1024.jpg */,
+			);
+			path = icon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -535,14 +601,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				D86E22811FFC87D7009EA637 /* backGround.png in Resources */,
+				D8889C89204EDDBC00E76A69 /* app_gaitubao_com_80x80.jpg in Resources */,
+				D8889C95204EDFEE00E76A69 /* app_gaitubao_com_120x120.jpg in Resources */,
+				D8889C94204EDFEE00E76A69 /* app_gaitubao_com_60x60.jpg in Resources */,
+				D87779492042AD5E0008D5FF /* MissionFileList.plist in Resources */,
 				D86E22831FFC87D7009EA637 /* 00.jpg in Resources */,
+				D8889C8A204EDDBC00E76A69 /* app_gaitubao_com_76x76.jpg in Resources */,
+				D8889C8F204EDDBC00E76A69 /* app_gaitubao_com_1024x1024.jpg in Resources */,
+				D8889C7C204ED54F00E76A69 /* app.jpg in Resources */,
+				D8889C87204EDDBC00E76A69 /* app_gaitubao_com_40x40.jpg in Resources */,
 				D86E22801FFC87D7009EA637 /* 左右键.png in Resources */,
+				D8889C8B204EDDBC00E76A69 /* app_gaitubao_com_20x20.jpg in Resources */,
 				D86E22861FFC87D7009EA637 /* functionButton.png in Resources */,
+				D8889C8C204EDDBC00E76A69 /* app_gaitubao_com_152x152.jpg in Resources */,
+				D8889C96204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg in Resources */,
 				D86E22851FFC87D7009EA637 /* progress底色.png in Resources */,
+				D8889C97204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg in Resources */,
+				D8889C8E204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg in Resources */,
+				D8889C88204EDDBC00E76A69 /* app_gaitubao_com_58x58.jpg in Resources */,
 				D86E22841FFC87D7009EA637 /* bar背景.png in Resources */,
 				D86E22501FFC855D009EA637 /* Assets.xcassets in Resources */,
+				D8889C8D204EDDBC00E76A69 /* app_gaitubao_com_167x167.jpg in Resources */,
 				D86E22821FFC87D7009EA637 /* first_bg.jpg in Resources */,
 				D82CD814203C727A00139B0C /* IQKeyboardManager.bundle in Resources */,
+				D8889C77204E980100E76A69 /* MissionList.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +705,7 @@
 				D81E3A6D2039CBCA002A7B37 /* PingView.m in Sources */,
 				D82CD817203C727A00139B0C /* IQUIWindow+Hierarchy.m in Sources */,
 				D82CD822203C8B4900139B0C /* WKProgressBarLayer.m in Sources */,
+				D8889C7A204E9D1000E76A69 /* InputMissionInDatabase.m in Sources */,
 				D82CD80F203C727A00139B0C /* IQToolbar.m in Sources */,
 				D8F7158C202C1D8400249E77 /* Group.m in Sources */,
 				D81E3A692039A731002A7B37 /* UITabBar+DKSTabBar.m in Sources */,
@@ -639,6 +722,7 @@
 				D8F7157D202BF35E00249E77 /* SettingArrowModel.m in Sources */,
 				D81E3A682039A731002A7B37 /* UITabBarItem+DKSBadge.m in Sources */,
 				D86E22481FFC855D009EA637 /* AppDelegate.m in Sources */,
+				D877794C2042AE4C0008D5FF /* CommandList.m in Sources */,
 				D82CD810203C727A00139B0C /* IQTitleBarButtonItem.m in Sources */,
 				D8F71586202C1D3400249E77 /* SettingSwitchModel.m in Sources */,
 				D82CD811203C727A00139B0C /* IQBarButtonItem.m in Sources */,
