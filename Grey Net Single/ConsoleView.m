@@ -23,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    //solve the bug after ios7.0
+//    self.view.backgroundColor = [UIColor whiteColor];
+    //
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHidden:) name:UIKeyboardDidHideNotification object:nil];
     //set nav title
@@ -43,15 +46,15 @@
     owner.font = [UIFont boldSystemFontOfSize:27];
     [self.view addSubview:owner];
     //textview
-    _commandTV = [[UITextView alloc]init];
-    _commandTV.frame = CGRectMake(20, self.view.bounds.size.height/15, self.view.bounds.size.width-40, self.view.bounds.size.height);
-    _commandTV.textColor = [UIColor whiteColor];
-    _commandTV.backgroundColor = [UIColor clearColor];
-    _commandTV.font = [UIFont systemFontOfSize:27];
-    _commandTV.text = @"Please enter your command";
-    [_commandTV setDelegate:self];
+    commandTV = [[UITextView alloc]init];
+    commandTV.frame = CGRectMake(20, self.view.bounds.size.height/15, self.view.bounds.size.width-40, self.view.bounds.size.height);
+    commandTV.textColor = [UIColor whiteColor];
+    commandTV.backgroundColor = [UIColor clearColor];
+    commandTV.font = [UIFont systemFontOfSize:27];
+    commandTV.text = @"Please enter your command";
+    [commandTV setDelegate:self];
 //    [_commandTV setEditable:NO];
-    [self.view addSubview:_commandTV];
+    [self.view addSubview:commandTV];
     
 //    [IQKeyboardManager s]
 }
@@ -80,7 +83,7 @@ replacementText:(NSString *)text
             [self.navigationController pushViewController:vc animated:YES];
         }
         else {
-            _commandTV.text = [@"Can't understand command: " stringByAppendingFormat:@"%@",textView.text];
+            commandTV.text = [@"Can't understand command: " stringByAppendingFormat:@"%@",textView.text];
         }
         return NO;
     }
@@ -92,11 +95,11 @@ replacementText:(NSString *)text
     //获取键盘高度
     NSDictionary *dict = notification.userInfo;
     _kbRect = [[dict objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    [self autoAdjustTo:_commandTV];
+    [self autoAdjustTo:commandTV];
 }
 //键盘消失
 - (void)keyboardDidHidden:(NSNotification *)notification{
-    _commandTV.textContainerInset = UIEdgeInsetsMake(5, 5, 5, 5);
+    commandTV.textContainerInset = UIEdgeInsetsMake(5, 5, 5, 5);
 }
 
 //是因为使用第三方库IQKeyboardManager，避免导航栏隐藏的BUG
@@ -113,7 +116,7 @@ replacementText:(NSString *)text
     CGFloat MAXY = CGRectGetMaxY(textRect);
     CGFloat MINY = CGRectGetMinY(textRect);
     //3.计算textView 内容的高度
-    CGSize size = [textView sizeThatFits:CGSizeMake(CGRectGetWidth(_commandTV.frame), MAXFLOAT)];
+    CGSize size = [textView sizeThatFits:CGSizeMake(CGRectGetWidth(commandTV.frame), MAXFLOAT)];
     //4.获取光标的位置
     CGPoint cursorPosition = [textView caretRectForPosition:textView.selectedTextRange.end].origin;
     CGPoint point = [textView convertPoint:cursorPosition toView:[UIApplication sharedApplication].keyWindow];

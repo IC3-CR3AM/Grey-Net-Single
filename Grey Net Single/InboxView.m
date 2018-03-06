@@ -13,6 +13,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    //solve the bug after ios7.0
+//    self.view.backgroundColor = [UIColor whiteColor];
     //--------------------------各种标签部分---------------------------------------------------------------
     //set nav title
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];

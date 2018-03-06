@@ -14,6 +14,6 @@
     @protected
     UILabel *titleLabel;
     UILabel* owner;
+    UITextView * commandTV;
 }
-@property (nonatomic,strong) UITextView * commandTV;
 @end

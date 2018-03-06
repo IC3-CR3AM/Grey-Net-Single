@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>mission0</key>
+	<dict>
+		<key>password</key>
+		<string>admin</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>192.168.1.1</string>
+		<key>mail</key>
+		<string>It is a mail test0</string>
+		<key>name</key>
+		<string>Jack</string>
+		<key>title</key>
+		<string>mission0 title</string>
+	</dict>
+	<key>mission1</key>
+	<dict>
+		<key>password</key>
+		<string>admin</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>192.168.1.1</string>
+		<key>mail</key>
+		<string>It is a mail test1</string>
+		<key>name</key>
+		<string>John</string>
+		<key>title</key>
+		<string>mission1 title</string>
+	</dict>
+</dict>
+</plist>

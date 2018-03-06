@@ -8,7 +8,7 @@
 
 #import "FCoverViewController.h"
 #import "SettingTableViewController.h"
-#import <FMDatabase.h>
+#import "InputMissionInDatabase.h"
 
 @interface FCoverViewController ()
 {
@@ -115,10 +115,14 @@
         }];
     }
     //---------------------------------数据库部分--------------------------------------------------
-    //NSUserdefault 存储当前用户对象
+    //NSUserdefault 存储当前用户对象 当前目录
     NSUserDefaults *currentUser = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *currentFolder = [NSUserDefaults standardUserDefaults];
+//    NSUserDefaults *currentIndex = [NSUserDefaults standardUserDefaults];
+//    NSUserDefaults *currentProgress = [NSUserDefaults standardUserDefaults];
     [currentUser setObject:self.userID forKey:@"currentUser"];
-    
+    [currentFolder setObject:@"/" forKey:@"currentFolder"];
+
     //create sqlite database
     NSString * strPath = [NSHomeDirectory() stringByAppendingString:@"/Documents/greyNetDB.db"];
     NSLog(@"%@", strPath);
@@ -132,7 +136,7 @@
     }
     //create a sql str
     NSString* strCreateTable = @"create table if not exists user(uid varchar(20) primary key, missionIndex integer, missionProgress integer)";
-    NSString* strCreateTableMission = @"create table if not exists mission(id integer primary key, missionIndex integer, missionProgress integer,mail text,title text,name text,ip text,port text)";
+    NSString* strCreateTableMission = @"create table if not exists mission(id integer primary key, missionIndex integer, missionProgress integer,mail text,title text,name text,ip text,port text,admin text,password text)";
     
     BOOL isCreate = [_db executeUpdate:strCreateTable];
     BOOL isCreatedMission = [_db executeUpdate:strCreateTableMission];
@@ -151,6 +155,9 @@
                 NSInteger uMissionIndex = [result intForColumn:@"missionIndex"];
                 
                 NSInteger uMissionProgress = [result intForColumn:@"missionProgress"];
+                //init current game progress
+//                [currentIndex setInteger:uMissionIndex forKey:@"currentIndex"];
+//                [currentProgress setInteger:uMissionProgress forKey:@"currentProgress"];
                 
                 NSLog(@"user id:%@, missionIndex:%ld, %ld",uid,uMissionIndex,uMissionProgress);
                 if([self.userID isEqualToString:uid]){
@@ -170,7 +177,8 @@
     //close db
     BOOL isClose = [_db close];
     NSLog(@"成功关闭数据库：%d",isClose);
-    
+    //init mission data
+    InputMissionInDatabase * imid = [[InputMissionInDatabase alloc]init];
 }
 
 - (void)didReceiveMemoryWarning {

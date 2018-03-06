@@ -20,8 +20,11 @@
     CGRect rx = [UIScreen mainScreen].bounds;
     UIImageView * _imageView = [[UIImageView alloc] init];
     _imageView.frame =rx;
-    _imageView.image = [UIImage imageNamed:@"background.png"];
-    [self.view addSubview:_imageView];
+    _imageView.image = [UIImage imageNamed:@"backGround.png"];
+//    _imageView.image = [UIImage imageNamed:@"first_bg.jpg"];
+
+    //    self.view
+    [self.view insertSubview:_imageView atIndex:0];
 }
 
 - (void)didReceiveMemoryWarning {

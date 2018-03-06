@@ -86,6 +86,8 @@
 -(void) inboxView{
     [_inboxRedPointBtn hidenBadge];
     InboxView * vc = [[InboxView alloc]init];
+    //solve the bug after ios7.0
+//    [vc.view setBackgroundColor:[UIColor whiteColor]];
     [self.navigationController pushViewController:vc animated:YES];
     [self.navigationController setToolbarHidden:YES];
     NSLog(@"go to InboxView!");
