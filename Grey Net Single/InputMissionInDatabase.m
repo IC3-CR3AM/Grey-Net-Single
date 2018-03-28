@@ -65,6 +65,8 @@
                         isFind = YES;
                     }
                 }
+//                //假设没有找到数据
+//                isFind = NO;
                 //如果没有找到，则插入一条新数据
                 if(!isFind){
                     NSLog(@"没有找到数据mail,插入信息");

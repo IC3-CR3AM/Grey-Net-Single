@@ -62,6 +62,7 @@
     //工具栏按钮
     UIBarButtonItem * btnInbox = [[UIBarButtonItem alloc]initWithCustomView:_inboxRedPointBtn];
     UIBarButtonItem * btnConsole = [[UIBarButtonItem alloc] initWithTitle:@"Console" style:UIBarButtonItemStylePlain target:self action:@selector(consoleView)];
+    [btnConsole setTintColor:[UIColor blackColor]];
 //    UIBarButtonItem * btnInbox = [[UIBarButtonItem alloc] initWithTitle:@"Inbox" style:UIBarButtonItemStylePlain target:self action:@selector(inboxView)];
     UIBarButtonItem * flexibleSpaceBarButton = [[UIBarButtonItem alloc]
                                                initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace

@@ -14,6 +14,9 @@
 		D81E3A6A2039A731002A7B37 /* UIView+DKSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E3A672039A731002A7B37 /* UIView+DKSBadge.m */; };
 		D81E3A6D2039CBCA002A7B37 /* PingView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E3A6C2039CBCA002A7B37 /* PingView.m */; };
 		D81E3A702039DDD2002A7B37 /* SSHView.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E3A6F2039DDD2002A7B37 /* SSHView.m */; };
+		D82BFB48204FAE22002CA3F6 /* confirmButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D82BFB46204FAE22002CA3F6 /* confirmButton.png */; };
+		D82BFB49204FAE22002CA3F6 /* launchImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D82BFB47204FAE22002CA3F6 /* launchImage.jpg */; };
+		D82BFB4B204FB503002CA3F6 /* launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D82BFB4A204FB503002CA3F6 /* launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg */; };
 		D82CD7E8203C5FF100139B0C /* SSHConsoleView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD7E7203C5FF100139B0C /* SSHConsoleView.m */; };
 		D82CD80E203C727A00139B0C /* IQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD7EB203C727900139B0C /* IQTextView.m */; };
 		D82CD80F203C727A00139B0C /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD7EF203C727900139B0C /* IQToolbar.m */; };
@@ -112,6 +115,9 @@
 		D81E3A6C2039CBCA002A7B37 /* PingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PingView.m; sourceTree = "<group>"; };
 		D81E3A6E2039DDD2002A7B37 /* SSHView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSHView.h; sourceTree = "<group>"; };
 		D81E3A6F2039DDD2002A7B37 /* SSHView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHView.m; sourceTree = "<group>"; };
+		D82BFB46204FAE22002CA3F6 /* confirmButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confirmButton.png; sourceTree = "<group>"; };
+		D82BFB47204FAE22002CA3F6 /* launchImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchImage.jpg; sourceTree = "<group>"; };
+		D82BFB4A204FB503002CA3F6 /* launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg; sourceTree = "<group>"; };
 		D82CD7E6203C5FF100139B0C /* SSHConsoleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSHConsoleView.h; sourceTree = "<group>"; };
 		D82CD7E7203C5FF100139B0C /* SSHConsoleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSHConsoleView.m; sourceTree = "<group>"; };
 		D82CD7EB203C727900139B0C /* IQTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQTextView.m; sourceTree = "<group>"; };
@@ -459,6 +465,9 @@
 		D86E22781FFC87AE009EA637 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D82BFB4A204FB503002CA3F6 /* launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg */,
+				D82BFB46204FAE22002CA3F6 /* confirmButton.png */,
+				D82BFB47204FAE22002CA3F6 /* launchImage.jpg */,
 				D86E227C1FFC87D6009EA637 /* 00.jpg */,
 				D86E227A1FFC87D5009EA637 /* backGround.png */,
 				D86E227F1FFC87D7009EA637 /* functionButton.png */,
@@ -614,14 +623,17 @@
 				D8889C8B204EDDBC00E76A69 /* app_gaitubao_com_20x20.jpg in Resources */,
 				D86E22861FFC87D7009EA637 /* functionButton.png in Resources */,
 				D8889C8C204EDDBC00E76A69 /* app_gaitubao_com_152x152.jpg in Resources */,
+				D82BFB48204FAE22002CA3F6 /* confirmButton.png in Resources */,
 				D8889C96204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg in Resources */,
 				D86E22851FFC87D7009EA637 /* progress底色.png in Resources */,
 				D8889C97204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg in Resources */,
 				D8889C8E204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg in Resources */,
 				D8889C88204EDDBC00E76A69 /* app_gaitubao_com_58x58.jpg in Resources */,
 				D86E22841FFC87D7009EA637 /* bar背景.png in Resources */,
+				D82BFB49204FAE22002CA3F6 /* launchImage.jpg in Resources */,
 				D86E22501FFC855D009EA637 /* Assets.xcassets in Resources */,
 				D8889C8D204EDDBC00E76A69 /* app_gaitubao_com_167x167.jpg in Resources */,
+				D82BFB4B204FB503002CA3F6 /* launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg in Resources */,
 				D86E22821FFC87D7009EA637 /* first_bg.jpg in Resources */,
 				D82CD814203C727A00139B0C /* IQKeyboardManager.bundle in Resources */,
 				D8889C77204E980100E76A69 /* MissionList.plist in Resources */,
@@ -882,6 +894,7 @@
 			baseConfigurationReference = A7DEC594C233182BB73DF32B /* Pods-Grey Net Single.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQYC9V69BR;
 				INFOPLIST_FILE = "Grey Net Single/Info.plist";
@@ -897,6 +910,7 @@
 			baseConfigurationReference = 294982480CFA0FE6780618BB /* Pods-Grey Net Single.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQYC9V69BR;
 				INFOPLIST_FILE = "Grey Net Single/Info.plist";

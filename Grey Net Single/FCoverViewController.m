@@ -92,7 +92,7 @@
     //button goto rootView
     UIButton* functionButton = [UIButton buttonWithType:UIButtonTypeCustom];
     functionButton.frame = CGRectMake(rx.size.width/2-50, rx.size.height - 125, 100, 100);
-    [functionButton setImage:[UIImage imageNamed:@"functionButton.png"] forState:UIControlStateNormal];
+    [functionButton setImage:[UIImage imageNamed:@"confirmButton.png"] forState:UIControlStateNormal];
     
     //set gesture interactive
     UITapGestureRecognizer * tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pressTap:)];
