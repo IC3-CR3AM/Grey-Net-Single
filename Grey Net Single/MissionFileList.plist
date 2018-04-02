@@ -5,11 +5,12 @@
 	<key>mission0</key>
 	<dict>
 		<key>SSHLog</key>
-		<array/>
+		<dict/>
 		<key>Windows</key>
-		<array>
-			<string>systemInfo.sys</string>
-		</array>
+		<dict>
+			<key>systemInfo.sys</key>
+			<string>file</string>
+		</dict>
 	</dict>
 	<key>mission1</key>
 	<dict/>

@@ -127,10 +127,10 @@ replacementText:(NSString *)text
     NSRange ran = [textView.text rangeOfString:currentUserName];
     NSMutableArray * ran1 = [self getRangeStr:textView.text findText:currentUserName];
     
-    NSLog(@"范围：%@",ran1);
-    NSLog(@"最后一个：%@,长度：%lu",[ran1 lastObject],(unsigned long)ran.length);
+//    NSLog(@"范围：%@",ran1);
+//    NSLog(@"最后一个：%@,长度：%lu",[ran1 lastObject],(unsigned long)ran.length);
     NSString * ran1Location = [ran1 lastObject];
-    NSLog(@"ran1Location：%@",ran1Location);
+//    NSLog(@"ran1Location：%@",ran1Location);
 
     if(ran1 != NULL  && [ran1Location intValue]!=0){
         if(textView.selectedRange.location + textView.selectedRange.length <= [ran1Location intValue]+ran.length){

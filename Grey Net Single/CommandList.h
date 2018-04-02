@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface CommandList : NSObject
--(void) CommandLs:(int) num;
-
+-(NSMutableArray *) CommandLs:(int) num;
+-(void) CommandCd:(NSString *) path;
 @end

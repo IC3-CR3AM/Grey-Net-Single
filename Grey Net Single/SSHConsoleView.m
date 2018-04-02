@@ -114,37 +114,67 @@ replacementText:(NSString *)text
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];
         NSLog(@"text get: %@", textView.text);
+        //获取最后一行的开头
+//        NSRange ran = [textView.text rangeOfString:currentUserName];
+//        NSMutableArray * ran1 = [self getRangeStr:textView.text findText:currentUserName];
+//        NSString * ran1Location = [ran1 lastObject];
+//        NSString * temp = [textView.text substringFromIndex:([ran1Location intValue]+ran.length)];
         //--------------------------------console通过命令切换到各个页面------------------------------------
-        if([textView.text hasPrefix:@"Admin:"] || [textView.text hasPrefix:@"admin:"]) {
-            NSLog(@"包含admin字符");
-            NSString * userName = [textView.text substringFromIndex:6];
-            NSLog(@"user:%@",userName);
-            if([userName isEqualToString:_admin]){
-                commandTV.text = @"password:";
-                _isAdminCorrect = true;
-            }else{
-                commandTV.text = @"admin:";
-            }
-//            commandTV.text = @"ssh error";
-        } else if ([textView.text hasPrefix:@"Password"] || [textView.text hasPrefix:@"password"]){
-            NSLog(@"包含Password字符");
-            NSString * pw = [textView.text substringFromIndex:9];
-            NSLog(@"pw:%@",pw);
-            if([pw isEqualToString:_pw]){
-                _isPasswordCorrect = true;
+            if([textView.text hasPrefix:@"Admin:"] || [textView.text hasPrefix:@"admin:"]) {
+                NSLog(@"包含admin字符");
+                NSString * userName = [textView.text substringFromIndex:6];
+                NSLog(@"user:%@",userName);
+                if([userName isEqualToString:_admin]){
+                    commandTV.text = @"password:";
+                    _isAdminCorrect = true;
+                }else{
+                    commandTV.text = @"admin:";
+                }
+                //            commandTV.text = @"ssh error";
+            } else if ([textView.text hasPrefix:@"Password"] || [textView.text hasPrefix:@"password"]){
+                NSLog(@"包含Password字符");
+                NSString * pw = [textView.text substringFromIndex:9];
+                NSLog(@"pw:%@",pw);
+                if([pw isEqualToString:_pw]){
+                    _isPasswordCorrect = true;
+                    commandTV.text = @"";
+                }else{
+                    commandTV.text = @"password:";
+                }
+            }else if(_isAdminCorrect && _isPasswordCorrect && ([textView.text hasPrefix:@"ls"] || [textView.text hasPrefix:@"Ls"])){
+                NSLog(@"包含commandLs字符");
+                //add function
+                NSMutableArray * catalog;
+                //调用ls命令
+                catalog = [cmd CommandLs:(int)_mUMissionProgress];
+
+                NSLog(@"catalog:%@",catalog);
+                NSString * fileString = [[NSString alloc]init];
+                for(NSString * cata in catalog){
+                    NSLog(@"cata:%@",cata);
+                    fileString = [fileString stringByAppendingString:cata];
+                    //加空格分开
+                    fileString = [fileString stringByAppendingString:@" "];
+                }
+                NSLog(@"fileString:%@",fileString);
+                commandTV.text = fileString;
+            } else if(_isAdminCorrect && _isPasswordCorrect && ([textView.text hasPrefix:@"cd"] || [textView.text hasPrefix:@"Cd"])){
+                NSLog(@"包含commandCd字符");
+                NSString * tempStr;
+                tempStr = textView.text;
+                if([tempStr length]<=3){
+                    NSLog(@"error,cd命令长度不足");
+                    return YES;
+                }
+                tempStr = [tempStr substringFromIndex:3];
+                //调用cd
+                [cmd CommandCd:tempStr];
                 commandTV.text = @"";
-            }else{
-                commandTV.text = @"password:";
+            } else {
+                commandTV.text = @"can't understand this command";
             }
-        }
-        else {
-            commandTV.text = @"can't understand this command";
-        }
         if(_isAdminCorrect && _isPasswordCorrect){
             owner.text = [_admin stringByAppendingString:@"$"];
-            //add function
-            [cmd CommandLs:0];
-        
         }
         return NO;
     }
