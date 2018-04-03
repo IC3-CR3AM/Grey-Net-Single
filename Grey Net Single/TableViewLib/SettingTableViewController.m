@@ -17,6 +17,7 @@
 #import "PingView.h"
 #import "SSHView.h"
 #import "DownloadView.h"
+#import "FlagPageView.h"
 
 @interface SettingTableViewController ()
 
@@ -41,10 +42,12 @@
     SettingModel *ssh = [SettingArrowModel settingModelWithTitle:@"SSH" andIcon:@"functionButton.png" andDesClass:[SSHView
                                                                                                                    class]];
     SettingModel *downloadTool = [SettingArrowModel settingModelWithTitle:@"Download Tool" andIcon:@"functionButton.png" andDesClass:[DownloadView class]];
-    SettingModel *sqlmap = [SettingArrowModel settingModelWithTitle:@"Sqlmap" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
+    SettingModel *flagPage = [SettingArrowModel settingModelWithTitle:@"Flag" andIcon:@"functionButton.png" andDesClass:[FlagPageView class]];
+//    SettingModel *sqlmap = [SettingArrowModel settingModelWithTitle:@"Sqlmap" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
+    
 //    SettingModel *soundEffect = [SettingArrowModel settingModelWithTitle:@"帮助" andIcon:@"sound_Effect@2x.png" andDesClass:[HelpViewController class]];
     Group *group = [[Group alloc] init];
-    group.items = @[ping,ssh,downloadTool,sqlmap];
+    group.items = @[ping,ssh,downloadTool,flagPage];
 
     [self.dataArray addObject:group];
 }

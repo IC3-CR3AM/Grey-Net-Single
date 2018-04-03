@@ -19,6 +19,7 @@
     NSString * port;
     NSString * username;
     NSString * password;
+    NSString * flag;
 }
 @end
 
@@ -41,7 +42,7 @@
             NSLog(@"InputMissionInDatabase:数据库打开成功");
         }
         //create a sql str
-        NSString* strCreateTableMission = @"create table if not exists mission(id integer primary key, missionIndex integer, missionProgress integer,mail text,title text,name text,ip text,port text,admin text,password text)";
+        NSString* strCreateTableMission = @"create table if not exists mission(id integer primary key, missionIndex integer, missionProgress integer,mail text,title text,name text,ip text,port text,admin text,password text,flag text)";
         
         BOOL isCreatedMission = [_db executeUpdate:strCreateTableMission];
         NSLog(@"InputMissionInDatabase:是否成功创建tableMission：%d",isCreatedMission);
@@ -70,6 +71,9 @@
                 //如果没有找到，则插入一条新数据
                 if(!isFind){
                     NSLog(@"没有找到数据mail,插入信息");
+                    //随机字符串存储空间
+                    char data[4];
+                    //add table
                     for(int i = 0;i<root.count;i++){
                         NSString * mission = [@"mission" stringByAppendingFormat:@"%d",i];
                         NSLog(@"mission:%@",mission);
@@ -89,9 +93,15 @@
                         NSLog(@"username:%@",username);
                         password = [missionProgress objectForKey:@"password"];
                         NSLog(@"password:%@",password);
+                        //随机数生成
+                        for (int x=0;x<4;data[x++] = (char)('a' + (arc4random_uniform(26))));
+                        NSString * ranStr = [[NSString alloc] initWithBytes:data length:4 encoding:NSUTF8StringEncoding];
+                        NSLog(@"ranStr:%@",ranStr);
+                        flag = ranStr;
+                        NSLog(@"flag:%@",flag);
                         //需要修改，增加任务index
                         NSString *
-                        strInsert = [@"insert into mission values(" stringByAppendingFormat:@"%d,%d,%d,'%@','%@','%@','%@','%@','%@','%@')",i+1,0,i,mail,title,name,ip,port,username,password];
+                        strInsert = [@"insert into mission values(" stringByAppendingFormat:@"%d,%d,%d,'%@','%@','%@','%@','%@','%@','%@','%@')",i+1,0,i,mail,title,name,ip,port,username,password,flag];
                         NSLog(@"strInsert：%@",strInsert);
                         BOOL isInsert = [_db executeUpdate:strInsert];
                         NSLog(@"InputMissionInDatabase:插入成功与否：%d",isInsert);

@@ -136,7 +136,7 @@
     }
     //create a sql str
     NSString* strCreateTable = @"create table if not exists user(uid varchar(20) primary key, missionIndex integer, missionProgress integer)";
-    NSString* strCreateTableMission = @"create table if not exists mission(id integer primary key, missionIndex integer, missionProgress integer,mail text,title text,name text,ip text,port text,admin text,password text)";
+    NSString* strCreateTableMission = @"create table if not exists mission(id integer primary key, missionIndex integer, missionProgress integer,mail text,title text,name text,ip text,port text,admin text,password text,flag text)";
     
     BOOL isCreate = [_db executeUpdate:strCreateTable];
     BOOL isCreatedMission = [_db executeUpdate:strCreateTableMission];

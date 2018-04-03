@@ -11,7 +11,7 @@
     NSString * path;
     NSDictionary * root;
     NSDictionary * missionPath;
-    NSArray * missionList;
+//    NSArray * missionList;
     
     NSUserDefaults * getCurrentFolder;
     NSString * currentFolder;

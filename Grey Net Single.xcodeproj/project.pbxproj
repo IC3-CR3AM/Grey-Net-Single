@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5DB4AD242273A1614D417118 /* libPods-Grey Net Single.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA19CADF8A377E3B40F0AC /* libPods-Grey Net Single.a */; };
+		D80F078A2073C88600022F23 /* FlagPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D80F07892073C88600022F23 /* FlagPageView.m */; };
 		D8119B1C202B205100452787 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8119B1B202B205100452787 /* SettingModel.m */; };
 		D81E3A682039A731002A7B37 /* UITabBarItem+DKSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E3A652039A731002A7B37 /* UITabBarItem+DKSBadge.m */; };
 		D81E3A692039A731002A7B37 /* UITabBar+DKSTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E3A662039A731002A7B37 /* UITabBar+DKSTabBar.m */; };
@@ -100,6 +101,8 @@
 		294982480CFA0FE6780618BB /* Pods-Grey Net Single.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grey Net Single.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grey Net Single/Pods-Grey Net Single.release.xcconfig"; sourceTree = "<group>"; };
 		64EA19CADF8A377E3B40F0AC /* libPods-Grey Net Single.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grey Net Single.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DEC594C233182BB73DF32B /* Pods-Grey Net Single.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grey Net Single.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grey Net Single/Pods-Grey Net Single.debug.xcconfig"; sourceTree = "<group>"; };
+		D80F07882073C88500022F23 /* FlagPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlagPageView.h; sourceTree = "<group>"; };
+		D80F07892073C88600022F23 /* FlagPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlagPageView.m; sourceTree = "<group>"; };
 		D81147C4202C629600A38BD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D81147C6202C62A400A38BD0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D81147C8202C62B000A38BD0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -434,6 +437,8 @@
 				D82CD7E7203C5FF100139B0C /* SSHConsoleView.m */,
 				D82CD81D203C886400139B0C /* DownloadView.h */,
 				D82CD81E203C886400139B0C /* DownloadView.m */,
+				D80F07882073C88500022F23 /* FlagPageView.h */,
+				D80F07892073C88600022F23 /* FlagPageView.m */,
 				D877794A2042AE4C0008D5FF /* CommandList.h */,
 				D877794B2042AE4C0008D5FF /* CommandList.m */,
 				D8889C78204E9D1000E76A69 /* InputMissionInDatabase.h */,
@@ -733,6 +738,7 @@
 				D8EA19AB20390FA7009B2F77 /* ConsoleView.m in Sources */,
 				D8F7157D202BF35E00249E77 /* SettingArrowModel.m in Sources */,
 				D81E3A682039A731002A7B37 /* UITabBarItem+DKSBadge.m in Sources */,
+				D80F078A2073C88600022F23 /* FlagPageView.m in Sources */,
 				D86E22481FFC855D009EA637 /* AppDelegate.m in Sources */,
 				D877794C2042AE4C0008D5FF /* CommandList.m in Sources */,
 				D82CD810203C727A00139B0C /* IQTitleBarButtonItem.m in Sources */,

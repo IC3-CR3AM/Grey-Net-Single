@@ -105,7 +105,6 @@
                 _mIndex = uMissionIndex;
                 _mProgress = uMissionProgress;
                 NSLog(@"SSHView ！！！ _mIndex:%ld, _mProgress:%ld",_mIndex,_mProgress);
-
             }
 //            strQuerry = [@"select * from mission where missionIndex = " stringByAppendingFormat:@"%ld and missionProgress = %ld",_mIndex,_mProgress ];
             strQuerry = @"select * from mission";
@@ -115,6 +114,8 @@
                      _ipdb = [result stringForColumn:@"ip"];
                      _portdb = [result stringForColumn:@"port"];
                      NSLog(@"SSHView ！！！ IP:%@, Port:%@",_ip,_port);
+                     NSLog(@"SSHView ！！！ IPDB:%@, PortDB:%@",_ipdb,_portdb);
+
                  } else{
                      NSLog(@"SSHView ！！！ can not find ip with these missionIndex:%d, _mIndex:%ld",[result intForColumn:@"missionIndex"],_mIndex);
                  }

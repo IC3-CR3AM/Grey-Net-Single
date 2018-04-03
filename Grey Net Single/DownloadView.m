@@ -21,6 +21,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //title
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
+    //    titleLabel.backgroundColor = [UIColor grayColor];
+    titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    titleLabel.textColor = [UIColor whiteColor];
+    titleLabel.textAlignment = NSTextAlignmentCenter;
+    titleLabel.text = @"Download";
+    self.navigationItem.titleView = titleLabel;
+    
     //progress 进度条
     WKProgressBarLayer *progressLayer = [[WKProgressBarLayer alloc] init];
     progressLayer.frame = CGRectMake(100, 200, 200, 10);
