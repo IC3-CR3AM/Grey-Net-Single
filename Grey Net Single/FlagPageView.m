@@ -51,6 +51,7 @@
     flagResult.font = [UIFont boldSystemFontOfSize:20];
     flagResult.textColor = [UIColor whiteColor];
     flagResult.textAlignment = NSTextAlignmentCenter;
+    flagResult.text = @"";
     
     //get device's bounds
     CGRect rx = [ UIScreen mainScreen ].bounds;
@@ -75,7 +76,7 @@
     textY = flagTF.frame.origin.y;
     textHeight = flagTF.frame.size.height;
     
-    //button goto rootView
+    //check button
     UIButton* functionButton = [UIButton buttonWithType:UIButtonTypeCustom];
     functionButton.frame = CGRectMake(rx.size.width/2-50, rx.size.height - 125, 100, 100);
     [functionButton setImage:[UIImage imageNamed:@"confirmButton.png"] forState:UIControlStateNormal];
@@ -112,6 +113,7 @@
         if([db open]){
             //查询
             NSString * strQuerry = [@"select * from user where uid = " stringByAppendingFormat:@"'%@'",[currentUser stringForKey:@"currentUser"]];
+            NSLog(@"strQuerry:%@",strQuerry);
             FMResultSet * result = [db executeQuery:strQuerry];
             while([result next]){
                 NSString * uid = [result stringForColumn:@"uid"];
@@ -150,6 +152,7 @@
         NSString * strQuerry = [@"select * from user where uid = " stringByAppendingFormat:@"'%@'",[currentUser stringForKey:@"currentUser"]];
         NSLog(@"strQuerry:%@",strQuerry);
         FMResultSet * result2 = [db executeQuery:strQuerry];
+        NSLog(@"result2:%@",result2);
         while([result2 next]){
             NSString * uid = [result2 stringForColumn:@"uid"];
             NSInteger uMissionIndex = [result2 intForColumn:@"missionIndex"];

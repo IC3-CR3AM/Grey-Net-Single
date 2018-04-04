@@ -155,17 +155,16 @@
                 NSInteger uMissionIndex = [result intForColumn:@"missionIndex"];
                 
                 NSInteger uMissionProgress = [result intForColumn:@"missionProgress"];
-                //init current game progress
-//                [currentIndex setInteger:uMissionIndex forKey:@"currentIndex"];
-//                [currentProgress setInteger:uMissionProgress forKey:@"currentProgress"];
                 
                 NSLog(@"user id:%@, missionIndex:%ld, %ld",uid,uMissionIndex,uMissionProgress);
                 if([self.userID isEqualToString:uid]){
                     isFind = YES;
+                    NSLog(@"找到uid");
                 }
             }
+            NSLog(@"isFind:%d",isFind);
             //如果没有找到，则插入一条新数据
-            if(!isFind && uid!=NULL){
+            if(!isFind && self.userID!=NULL){
                 NSString * strInsert = [@"insert into user values(" stringByAppendingFormat:@"'%@',%ld,0)",self.userID,self.missionIndex];
                 NSLog(@"strInsert：%@",strInsert);
                 NSLog(@"self.userID：%@",self.userID);

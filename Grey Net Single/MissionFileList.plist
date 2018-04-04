@@ -13,6 +13,14 @@
 		</dict>
 	</dict>
 	<key>mission1</key>
-	<dict/>
+	<dict>
+		<key>Windows</key>
+		<dict>
+			<key>systemInfo.sys</key>
+			<string>file</string>
+		</dict>
+		<key>SSHLog</key>
+		<dict/>
+	</dict>
 </dict>
 </plist>
