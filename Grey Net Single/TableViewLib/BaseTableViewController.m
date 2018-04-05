@@ -9,21 +9,28 @@
 #import "BaseTableViewController.h"
 #import "SettingModel.h"       /**添加模型数据*/
 #import "SettingArrowModel.h"  /**添加箭头模型数据*/
+#import "SettingSwitchModel.h"  /*添加Switch模型数据*/
 #import "Group.h"              /**添加组模型数据*/
 #import "SettingCell.h"        /**添加cell*/
 #import "UIView+DKSBadge.h"    /*小红点*/
 #import "FCoverViewController.h"
 #import "InboxView.h"
 #import "ConsoleView.h"
+//#import "audioController.h" //音乐控制
+
 
 @interface BaseTableViewController ()
-
 @end
 
 @implementation BaseTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //init music 初始化音乐
+//    _ac = [[audioController alloc]init];
+//    [_ac createAVPlayer];
+//    NSLog(@"%@");
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -49,7 +56,7 @@
     self.navigationController.toolbarHidden = NO;
     //设置工具栏透明
     self.navigationController.toolbar.translucent = NO;
-    
+    //-----需要改进部分----当新邮件诞生需要产生新的小红点-----------
     //小红点 red point
     _inboxRedPointBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_inboxRedPointBtn setTitle:@"Inbox" forState:UIControlStateNormal];
@@ -185,6 +192,20 @@
             NSLog(@"从mainview切换到 navigarion");
         }
     }
+    
+//    //获取switch里的判断
+//    if([items isKindOfClass:[SettingSwitchModel class]]){
+//        NSLog(@"is SettingSwitchModel");
+//        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+//        NSLog(@"this cell:%@",cell);
+//        NSLog(@"this cell.accessoryView:%d",((UISwitch *)cell.accessoryView).isOn);
+//
+//        if(((UISwitch *)cell.accessoryView).isOn){
+//            [ac playMusic];
+//        } else {
+//            [ac stopMusic];
+//        }
+//    }
 }
 
 @end

@@ -14,8 +14,6 @@
 @interface SettingCell()
 /**箭头*/
 @property (strong, nonatomic) UIImageView *arrowView;
-/**开关*/
-@property (strong, nonatomic) UISwitch *mySwitch;
 /**标签文字*/
 @property (strong, nonatomic) UILabel *myLabel;
 @end
@@ -61,7 +59,6 @@
 }
 
 - (void)setItems:(SettingModel *)items{
-    
     _items = items;
     /**1.设置数据*/
     [self setupData];
@@ -75,18 +72,34 @@
 }
 #pragma mark--设置右边内容
 - (void)setupRightContent{
-    
     /**如果是箭头模型类,cell的accessoryView显示箭头*/
     if ([self.items isKindOfClass:[SettingArrowModel class]]) {
         self.accessoryView = self.arrowView;
     }else if ([self.items isKindOfClass:[SettingSwitchModel class]]){
         self.accessoryView = self.mySwitch;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        //初始化播放对象
+        _ac = [[audioController alloc]init];
+        [_ac createAVPlayer];
+        //播放音乐
+        if(![_ac isPlaying]){
+            [_ac playMusic];
+        }
+        [_mySwitch addTarget:self action:@selector(switchChanged:) forControlEvents:UIControlEventValueChanged];
     }else if ([self.items isKindOfClass:[SettingLabelModel class]]){
         self.accessoryView = self.myLabel;
         self.myLabel.backgroundColor = [UIColor orangeColor];
     }else{
         self.accessoryView = nil;
+    }
+}
+
+-(void) switchChanged:(id) sender{
+    UISwitch * uSwitch = (UISwitch *)sender;
+    if(uSwitch.isOn){
+        [_ac playMusic];
+    }else{
+        [_ac stopMusic];
     }
 }
 @end

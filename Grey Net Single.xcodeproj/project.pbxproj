@@ -36,6 +36,9 @@
 		D82CD81C203C727A00139B0C /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD80D203C727900139B0C /* IQKeyboardReturnKeyHandler.m */; };
 		D82CD81F203C886400139B0C /* DownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD81E203C886400139B0C /* DownloadView.m */; };
 		D82CD822203C8B4900139B0C /* WKProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */; };
+		D85DBAA92075126D00316B8A /* audioController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DBAA82075126D00316B8A /* audioController.m */; };
+		D85DBAAB207520EC00316B8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85DBAAA207520EC00316B8A /* AVFoundation.framework */; };
+		D85DBAAD2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */; };
 		D86A64872037C11B0016244B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D86A64862037C11B0016244B /* libsqlite3.tbd */; };
 		D86A648A20387BBD0016244B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A648920387BBD0016244B /* BaseView.m */; };
 		D86E0E152029D23F0075AAE2 /* FCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86E0E142029D23F0075AAE2 /* FCoverViewController.m */; };
@@ -158,6 +161,11 @@
 		D82CD81E203C886400139B0C /* DownloadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadView.m; sourceTree = "<group>"; };
 		D82CD820203C8B4900139B0C /* WKProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKProgressBarLayer.h; sourceTree = "<group>"; };
 		D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKProgressBarLayer.m; sourceTree = "<group>"; };
+		D85DBAA72075126D00316B8A /* audioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audioController.h; sourceTree = "<group>"; };
+		D85DBAA82075126D00316B8A /* audioController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioController.m; sourceTree = "<group>"; };
+		D85DBAAA207520EC00316B8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Donna Burke-HEAVENS DIVIDE (Instrumental).mp3"; sourceTree = "<group>"; };
+		D85DBAAF207646E400316B8A /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D86A64862037C11B0016244B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D86A648820387BBD0016244B /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		D86A648920387BBD0016244B /* BaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
@@ -227,6 +235,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85DBAAB207520EC00316B8A /* AVFoundation.framework in Frameworks */,
 				D86A64872037C11B0016244B /* libsqlite3.tbd in Frameworks */,
 				5DB4AD242273A1614D417118 /* libPods-Grey Net Single.a in Frameworks */,
 			);
@@ -261,6 +270,8 @@
 		87C684985EDA8C8187D12054 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D85DBAAF207646E400316B8A /* libFMDB.a */,
+				D85DBAAA207520EC00316B8A /* AVFoundation.framework */,
 				D86A64862037C11B0016244B /* libsqlite3.tbd */,
 				D81147C8202C62B000A38BD0 /* CoreGraphics.framework */,
 				D81147C6202C62A400A38BD0 /* UIKit.framework */,
@@ -384,6 +395,13 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		D85DBAAE2076414900316B8A /* audio */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
 		D86E223A1FFC855D009EA637 = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +427,8 @@
 		D86E22451FFC855D009EA637 /* Grey Net Single */ = {
 			isa = PBXGroup;
 			children = (
+				D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */,
+				D85DBAAE2076414900316B8A /* audio */,
 				D82CD820203C8B4900139B0C /* WKProgressBarLayer.h */,
 				D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */,
 				D82CD7E9203C727900139B0C /* IQKeyboardManager */,
@@ -437,6 +457,8 @@
 				D82CD7E7203C5FF100139B0C /* SSHConsoleView.m */,
 				D82CD81D203C886400139B0C /* DownloadView.h */,
 				D82CD81E203C886400139B0C /* DownloadView.m */,
+				D85DBAA72075126D00316B8A /* audioController.h */,
+				D85DBAA82075126D00316B8A /* audioController.m */,
 				D80F07882073C88500022F23 /* FlagPageView.h */,
 				D80F07892073C88600022F23 /* FlagPageView.m */,
 				D877794A2042AE4C0008D5FF /* CommandList.h */,
@@ -631,6 +653,7 @@
 				D82BFB48204FAE22002CA3F6 /* confirmButton.png in Resources */,
 				D8889C96204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg in Resources */,
 				D86E22851FFC87D7009EA637 /* progress底色.png in Resources */,
+				D85DBAAD2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 in Resources */,
 				D8889C97204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg in Resources */,
 				D8889C8E204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg in Resources */,
 				D8889C88204EDDBC00E76A69 /* app_gaitubao_com_58x58.jpg in Resources */,
@@ -727,6 +750,7 @@
 				D8F7158C202C1D8400249E77 /* Group.m in Sources */,
 				D81E3A692039A731002A7B37 /* UITabBar+DKSTabBar.m in Sources */,
 				D82CD81C203C727A00139B0C /* IQKeyboardReturnKeyHandler.m in Sources */,
+				D85DBAA92075126D00316B8A /* audioController.m in Sources */,
 				D82CD812203C727A00139B0C /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				D86E22561FFC855D009EA637 /* main.m in Sources */,
 				D82CD813203C727A00139B0C /* IQPreviousNextView.m in Sources */,

@@ -39,8 +39,7 @@
 - (void)setupGroup1{
     
     SettingModel *ping = [SettingArrowModel settingModelWithTitle:@"Ping" andIcon:@"functionButton.png" andDesClass:[PingView class]];
-    SettingModel *ssh = [SettingArrowModel settingModelWithTitle:@"SSH" andIcon:@"functionButton.png" andDesClass:[SSHView
-                                                                                                                   class]];
+    SettingModel *ssh = [SettingArrowModel settingModelWithTitle:@"SSH" andIcon:@"functionButton.png" andDesClass:[SSHView class]];
     SettingModel *downloadTool = [SettingArrowModel settingModelWithTitle:@"Download Tool" andIcon:@"functionButton.png" andDesClass:[DownloadView class]];
     SettingModel *flagPage = [SettingArrowModel settingModelWithTitle:@"Flag" andIcon:@"functionButton.png" andDesClass:[FlagPageView class]];
 //    SettingModel *sqlmap = [SettingArrowModel settingModelWithTitle:@"Sqlmap" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
@@ -70,6 +69,12 @@
         
 //    };
     SettingModel *music = [SettingSwitchModel settingModelWithTitle:@"Music" andIcon:@"functionButton.png" ];
+    music.myBlocks = ^{
+        NSLog(@"执行music‘s block");
+//        audioController * ac = [[audioController alloc]init];
+//        [ac createAVPlayer];
+//        [ac playMusic];
+    };
     SettingModel *help = [SettingArrowModel settingModelWithTitle:@"HELP" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
     Group *group = [[Group alloc] init];
     group.items = @[music,help];

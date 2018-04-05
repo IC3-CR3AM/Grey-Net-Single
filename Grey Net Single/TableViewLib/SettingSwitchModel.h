@@ -10,4 +10,5 @@
 
 @interface SettingSwitchModel : SettingModel
 
+
 @end

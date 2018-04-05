@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "audioController.h"
+
 @class SettingModel;
 @interface SettingCell : UITableViewCell
+@property (strong, nonatomic) audioController * ac;
+
 /**封装Cell*/
 + (instancetype)settingCellWithTableView:(UITableView *)tableView;
 @property (strong, nonatomic) SettingModel *items;
+/**开关*/
+@property (strong, nonatomic) UISwitch *mySwitch;
 @end
