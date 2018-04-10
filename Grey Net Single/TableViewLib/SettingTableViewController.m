@@ -18,6 +18,7 @@
 #import "SSHView.h"
 #import "DownloadView.h"
 #import "FlagPageView.h"
+#import "HelpPageView.h"
 
 @interface SettingTableViewController ()
 
@@ -75,7 +76,7 @@
 //        [ac createAVPlayer];
 //        [ac playMusic];
     };
-    SettingModel *help = [SettingArrowModel settingModelWithTitle:@"HELP" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
+    SettingModel *help = [SettingArrowModel settingModelWithTitle:@"HELP" andIcon:@"functionButton.png" andDesClass:[HelpPageView class]];
     Group *group = [[Group alloc] init];
     group.items = @[music,help];
     [self.dataArray addObject:group];

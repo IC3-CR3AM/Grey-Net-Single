@@ -13,7 +13,7 @@
 -(void) createAVPlayer{
     NSLog(@"创建音乐player");
     //获取本地mp3资源
-    NSString * str = [[NSBundle mainBundle] pathForResource:@"Donna Burke-HEAVENS DIVIDE (Instrumental)" ofType:@"mp3"];
+    NSString * str = [[NSBundle mainBundle] pathForResource:@"Zz_白日梦_zZ-初音未来的激唱" ofType:@"mp3"];
     NSURL * urlMusic = [NSURL fileURLWithPath:str];
     NSLog(@"url:%@",urlMusic);
     

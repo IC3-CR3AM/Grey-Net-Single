@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5DB4AD242273A1614D417118 /* libPods-Grey Net Single.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EA19CADF8A377E3B40F0AC /* libPods-Grey Net Single.a */; };
+		D8066F6820767B8100362983 /* HelpPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D8066F6620767B8100362983 /* HelpPageView.m */; };
+		D8066F6920767B8100362983 /* audioController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8066F6720767B8100362983 /* audioController.m */; };
+		D8066F6B207681B700362983 /* Zz_白日梦_zZ-初音未来的激唱.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D8066F6A207681B700362983 /* Zz_白日梦_zZ-初音未来的激唱.mp3 */; };
 		D80F078A2073C88600022F23 /* FlagPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D80F07892073C88600022F23 /* FlagPageView.m */; };
 		D8119B1C202B205100452787 /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D8119B1B202B205100452787 /* SettingModel.m */; };
 		D81E3A682039A731002A7B37 /* UITabBarItem+DKSBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = D81E3A652039A731002A7B37 /* UITabBarItem+DKSBadge.m */; };
@@ -36,7 +39,6 @@
 		D82CD81C203C727A00139B0C /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD80D203C727900139B0C /* IQKeyboardReturnKeyHandler.m */; };
 		D82CD81F203C886400139B0C /* DownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD81E203C886400139B0C /* DownloadView.m */; };
 		D82CD822203C8B4900139B0C /* WKProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */; };
-		D85DBAA92075126D00316B8A /* audioController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85DBAA82075126D00316B8A /* audioController.m */; };
 		D85DBAAB207520EC00316B8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85DBAAA207520EC00316B8A /* AVFoundation.framework */; };
 		D85DBAAD2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */; };
 		D86A64872037C11B0016244B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D86A64862037C11B0016244B /* libsqlite3.tbd */; };
@@ -104,6 +106,11 @@
 		294982480CFA0FE6780618BB /* Pods-Grey Net Single.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grey Net Single.release.xcconfig"; path = "Pods/Target Support Files/Pods-Grey Net Single/Pods-Grey Net Single.release.xcconfig"; sourceTree = "<group>"; };
 		64EA19CADF8A377E3B40F0AC /* libPods-Grey Net Single.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Grey Net Single.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DEC594C233182BB73DF32B /* Pods-Grey Net Single.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grey Net Single.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grey Net Single/Pods-Grey Net Single.debug.xcconfig"; sourceTree = "<group>"; };
+		D8066F6420767B8100362983 /* audioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = audioController.h; sourceTree = "<group>"; };
+		D8066F6520767B8100362983 /* HelpPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpPageView.h; sourceTree = "<group>"; };
+		D8066F6620767B8100362983 /* HelpPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpPageView.m; sourceTree = "<group>"; };
+		D8066F6720767B8100362983 /* audioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = audioController.m; sourceTree = "<group>"; };
+		D8066F6A207681B700362983 /* Zz_白日梦_zZ-初音未来的激唱.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Zz_白日梦_zZ-初音未来的激唱.mp3"; sourceTree = "<group>"; };
 		D80F07882073C88500022F23 /* FlagPageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlagPageView.h; sourceTree = "<group>"; };
 		D80F07892073C88600022F23 /* FlagPageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlagPageView.m; sourceTree = "<group>"; };
 		D81147C4202C629600A38BD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,8 +168,6 @@
 		D82CD81E203C886400139B0C /* DownloadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadView.m; sourceTree = "<group>"; };
 		D82CD820203C8B4900139B0C /* WKProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKProgressBarLayer.h; sourceTree = "<group>"; };
 		D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKProgressBarLayer.m; sourceTree = "<group>"; };
-		D85DBAA72075126D00316B8A /* audioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = audioController.h; sourceTree = "<group>"; };
-		D85DBAA82075126D00316B8A /* audioController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = audioController.m; sourceTree = "<group>"; };
 		D85DBAAA207520EC00316B8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Donna Burke-HEAVENS DIVIDE (Instrumental).mp3"; sourceTree = "<group>"; };
 		D85DBAAF207646E400316B8A /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +286,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D8066F5B2076764600362983 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				D8066F6A207681B700362983 /* Zz_白日梦_zZ-初音未来的激唱.mp3 */,
+				D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		D8066F5C2076769700362983 /* group1 */ = {
+			isa = PBXGroup;
+			children = (
+				D81E3A6B2039CBCA002A7B37 /* PingView.h */,
+				D81E3A6C2039CBCA002A7B37 /* PingView.m */,
+				D81E3A6E2039DDD2002A7B37 /* SSHView.h */,
+				D81E3A6F2039DDD2002A7B37 /* SSHView.m */,
+				D82CD7E6203C5FF100139B0C /* SSHConsoleView.h */,
+				D82CD7E7203C5FF100139B0C /* SSHConsoleView.m */,
+				D82CD81D203C886400139B0C /* DownloadView.h */,
+				D82CD81E203C886400139B0C /* DownloadView.m */,
+				D80F07882073C88500022F23 /* FlagPageView.h */,
+				D80F07892073C88600022F23 /* FlagPageView.m */,
+			);
+			path = group1;
+			sourceTree = "<group>";
+		};
+		D8066F5E207676EA00362983 /* barItem */ = {
+			isa = PBXGroup;
+			children = (
+				D8EA19A620390D9B009B2F77 /* InboxView.h */,
+				D8EA19A720390D9B009B2F77 /* InboxView.m */,
+				D8EA19A920390FA7009B2F77 /* ConsoleView.h */,
+				D8EA19AA20390FA7009B2F77 /* ConsoleView.m */,
+			);
+			path = barItem;
+			sourceTree = "<group>";
+		};
+		D8066F6320767B8100362983 /* group2 */ = {
+			isa = PBXGroup;
+			children = (
+				D8066F6420767B8100362983 /* audioController.h */,
+				D8066F6720767B8100362983 /* audioController.m */,
+				D8066F6520767B8100362983 /* HelpPageView.h */,
+				D8066F6620767B8100362983 /* HelpPageView.m */,
+			);
+			path = group2;
+			sourceTree = "<group>";
+		};
 		D80A19292036ED360082CABD /* TableViewLib */ = {
 			isa = PBXGroup;
 			children = (
@@ -395,13 +448,6 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
-		D85DBAAE2076414900316B8A /* audio */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = audio;
-			sourceTree = "<group>";
-		};
 		D86E223A1FFC855D009EA637 = {
 			isa = PBXGroup;
 			children = (
@@ -427,13 +473,12 @@
 		D86E22451FFC855D009EA637 /* Grey Net Single */ = {
 			isa = PBXGroup;
 			children = (
-				D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */,
-				D85DBAAE2076414900316B8A /* audio */,
 				D82CD820203C8B4900139B0C /* WKProgressBarLayer.h */,
 				D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */,
 				D82CD7E9203C727900139B0C /* IQKeyboardManager */,
 				D81E3A612039A731002A7B37 /* DKSBadge */,
 				D80A19292036ED360082CABD /* TableViewLib */,
+				D8066F5B2076764600362983 /* audio */,
 				D8889C7D204EDDAB00E76A69 /* icon */,
 				D86E22781FFC87AE009EA637 /* images */,
 				D86E22461FFC855D009EA637 /* AppDelegate.h */,
@@ -445,22 +490,9 @@
 				D86E0E142029D23F0075AAE2 /* FCoverViewController.m */,
 				D86A648820387BBD0016244B /* BaseView.h */,
 				D86A648920387BBD0016244B /* BaseView.m */,
-				D8EA19A620390D9B009B2F77 /* InboxView.h */,
-				D8EA19A720390D9B009B2F77 /* InboxView.m */,
-				D8EA19A920390FA7009B2F77 /* ConsoleView.h */,
-				D8EA19AA20390FA7009B2F77 /* ConsoleView.m */,
-				D81E3A6B2039CBCA002A7B37 /* PingView.h */,
-				D81E3A6C2039CBCA002A7B37 /* PingView.m */,
-				D81E3A6E2039DDD2002A7B37 /* SSHView.h */,
-				D81E3A6F2039DDD2002A7B37 /* SSHView.m */,
-				D82CD7E6203C5FF100139B0C /* SSHConsoleView.h */,
-				D82CD7E7203C5FF100139B0C /* SSHConsoleView.m */,
-				D82CD81D203C886400139B0C /* DownloadView.h */,
-				D82CD81E203C886400139B0C /* DownloadView.m */,
-				D85DBAA72075126D00316B8A /* audioController.h */,
-				D85DBAA82075126D00316B8A /* audioController.m */,
-				D80F07882073C88500022F23 /* FlagPageView.h */,
-				D80F07892073C88600022F23 /* FlagPageView.m */,
+				D8066F5E207676EA00362983 /* barItem */,
+				D8066F5C2076769700362983 /* group1 */,
+				D8066F6320767B8100362983 /* group2 */,
 				D877794A2042AE4C0008D5FF /* CommandList.h */,
 				D877794B2042AE4C0008D5FF /* CommandList.m */,
 				D8889C78204E9D1000E76A69 /* InputMissionInDatabase.h */,
@@ -592,7 +624,7 @@
 		D86E223B1FFC855D009EA637 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Frank Chen";
 				TargetAttributes = {
 					D86E22421FFC855D009EA637 = {
@@ -660,6 +692,7 @@
 				D86E22841FFC87D7009EA637 /* bar背景.png in Resources */,
 				D82BFB49204FAE22002CA3F6 /* launchImage.jpg in Resources */,
 				D86E22501FFC855D009EA637 /* Assets.xcassets in Resources */,
+				D8066F6B207681B700362983 /* Zz_白日梦_zZ-初音未来的激唱.mp3 in Resources */,
 				D8889C8D204EDDBC00E76A69 /* app_gaitubao_com_167x167.jpg in Resources */,
 				D82BFB4B204FB503002CA3F6 /* launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg in Resources */,
 				D86E22821FFC87D7009EA637 /* first_bg.jpg in Resources */,
@@ -750,9 +783,9 @@
 				D8F7158C202C1D8400249E77 /* Group.m in Sources */,
 				D81E3A692039A731002A7B37 /* UITabBar+DKSTabBar.m in Sources */,
 				D82CD81C203C727A00139B0C /* IQKeyboardReturnKeyHandler.m in Sources */,
-				D85DBAA92075126D00316B8A /* audioController.m in Sources */,
 				D82CD812203C727A00139B0C /* IQUIView+IQKeyboardToolbar.m in Sources */,
 				D86E22561FFC855D009EA637 /* main.m in Sources */,
+				D8066F6920767B8100362983 /* audioController.m in Sources */,
 				D82CD813203C727A00139B0C /* IQPreviousNextView.m in Sources */,
 				D82CD815203C727A00139B0C /* IQKeyboardManager.m in Sources */,
 				D8F71592202C1EF800249E77 /* SettingTableViewController.m in Sources */,
@@ -775,6 +808,7 @@
 				D86A648A20387BBD0016244B /* BaseView.m in Sources */,
 				D82CD7E8203C5FF100139B0C /* SSHConsoleView.m in Sources */,
 				D82CD818203C727A00139B0C /* IQUITextFieldView+Additions.m in Sources */,
+				D8066F6820767B8100362983 /* HelpPageView.m in Sources */,
 				D8F71589202C1D4A00249E77 /* SettingLabelModel.m in Sources */,
 				D82CD816203C727A00139B0C /* IQNSArray+Sort.m in Sources */,
 				D8F71583202C1AF600249E77 /* SettingCell.m in Sources */,
@@ -829,6 +863,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -836,6 +871,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -884,6 +920,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -891,6 +928,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
