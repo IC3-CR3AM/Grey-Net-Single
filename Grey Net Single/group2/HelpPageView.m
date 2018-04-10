@@ -64,7 +64,15 @@
     
     self.textView.backgroundColor = [UIColor clearColor];//设置它的背景颜色
     
-    self.textView.text = @"Now is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\nNow is the time for all good developers to come to serve their country.\n";//设置它显示的内容
+    NSString * str = [[NSBundle mainBundle] pathForResource:@"Documents" ofType:@"txt"];
+    NSURL * urlDoc = [NSURL fileURLWithPath:str];
+
+    NSString * strDoc = [NSString stringWithContentsOfURL:urlDoc encoding:kCFStringEncodingUTF8 error:NULL];
+    
+    NSLog(@"DocumentsURL:%@",urlDoc);
+    NSLog(@"Documents:%@",strDoc);
+
+    self.textView.text = strDoc;//设置它显示的内容
     
 //    self.textView.returnKeyType = UIReturnKeyDefault;//返回键的类型
 //

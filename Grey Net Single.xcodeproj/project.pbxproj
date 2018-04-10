@@ -39,6 +39,7 @@
 		D82CD81C203C727A00139B0C /* IQKeyboardReturnKeyHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD80D203C727900139B0C /* IQKeyboardReturnKeyHandler.m */; };
 		D82CD81F203C886400139B0C /* DownloadView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD81E203C886400139B0C /* DownloadView.m */; };
 		D82CD822203C8B4900139B0C /* WKProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */; };
+		D848DDA7207C8E91004A330E /* Documents.txt in Resources */ = {isa = PBXBuildFile; fileRef = D848DDA6207C8E91004A330E /* Documents.txt */; };
 		D85DBAAB207520EC00316B8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85DBAAA207520EC00316B8A /* AVFoundation.framework */; };
 		D85DBAAD2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */; };
 		D86A64872037C11B0016244B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D86A64862037C11B0016244B /* libsqlite3.tbd */; };
@@ -168,6 +169,7 @@
 		D82CD81E203C886400139B0C /* DownloadView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadView.m; sourceTree = "<group>"; };
 		D82CD820203C8B4900139B0C /* WKProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKProgressBarLayer.h; sourceTree = "<group>"; };
 		D82CD821203C8B4900139B0C /* WKProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKProgressBarLayer.m; sourceTree = "<group>"; };
+		D848DDA6207C8E91004A330E /* Documents.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Documents.txt; sourceTree = "<group>"; };
 		D85DBAAA207520EC00316B8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Donna Burke-HEAVENS DIVIDE (Instrumental).mp3"; sourceTree = "<group>"; };
 		D85DBAAF207646E400316B8A /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -326,6 +328,7 @@
 		D8066F6320767B8100362983 /* group2 */ = {
 			isa = PBXGroup;
 			children = (
+				D848DDA6207C8E91004A330E /* Documents.txt */,
 				D8066F6420767B8100362983 /* audioController.h */,
 				D8066F6720767B8100362983 /* audioController.m */,
 				D8066F6520767B8100362983 /* HelpPageView.h */,
@@ -689,6 +692,7 @@
 				D8889C97204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg in Resources */,
 				D8889C8E204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg in Resources */,
 				D8889C88204EDDBC00E76A69 /* app_gaitubao_com_58x58.jpg in Resources */,
+				D848DDA7207C8E91004A330E /* Documents.txt in Resources */,
 				D86E22841FFC87D7009EA637 /* bar背景.png in Resources */,
 				D82BFB49204FAE22002CA3F6 /* launchImage.jpg in Resources */,
 				D86E22501FFC855D009EA637 /* Assets.xcassets in Resources */,

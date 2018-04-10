@@ -141,7 +141,7 @@ replacementText:(NSString *)text
                 }else{
                     commandTV.text = @"password:";
                 }
-            }else if(_isAdminCorrect && _isPasswordCorrect && ([textView.text hasPrefix:@"ls"] || [textView.text hasPrefix:@"Ls"])){
+            }else if(_isAdminCorrect && _isPasswordCorrect && ([textView.text hasPrefix:@"ls"] || [textView.text hasPrefix:@"Ls"] || [textView.text hasPrefix:@"Dir"] || [textView.text hasPrefix:@"dir"])){
                 NSLog(@"包含commandLs字符");
                 //add function
                 NSMutableArray * catalog;
