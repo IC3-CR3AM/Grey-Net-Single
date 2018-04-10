@@ -1,85 +1,47 @@
-Grey Net
-
-
 -------
 Mission
 -------
 
-You recieve you assignments by email. Read them carefully, they for
-example contain the IP address of the machine you must hack. I'm not
-going to explain how you should go about the rest, because that would
-take the fun out of the game. But it's all quit self-explaining.
+You recieve you assignments by email. Read them carefully, they for example contain the IP address of the machine you must hack. I'm not going to explain how you should go about the rest, because that would take the fun out of the game. But it's all quit self-explaining.
 
 
 Just remember these things:
 
-- After you succesfully connect to the target host using Telnet, the
-  target system will start to backtrace you. Don't let them completely
-  trace you because this will lead to your arrest. You can view the
-  trace process in the left lower corner during Telnet sessions.
+- After you succesfully connect to the target host using SSH, the target system will start to backtrace you. Don't let them completely trace you because this will lead to your arrest. You can view the trace process in the left lower corner during SSH sessions.
 
-  If you don't think you are going to complete the mission before the
-  trace completes, quickly disconnect and reconnect to try it again.
+  If you don't think you are going to complete the mission before the trace completes, quickly disconnect and reconnect to try it again.
 
-- VERY IMPORTANT: always delete your logfile before you disconnect from a
-  telnet session. The logfiles are not always on the same place, because
-  every system is different. But it's usually in a folder called "Logs".
-  Find your logfile (192.168.010.001) and DESTROY (see Toolbox) it.
+- VERY IMPORTANT: always delete your logfile before you disconnect from a SSH session. The logfiles are not always on the same place, because every system is different. But it's usually in a folder called "Logs". Find your logfile (192.168.010.001) and DESTROY (see Toolbox) it.
 
-- If you get busted 3 times the game is over. The judge doesn't like a
-  persistant hacker.
+- If you get busted 3 times the game is over. The judge doesn't like a persistant hacker.
 
 
 -----------
 The toolbar
 -----------
 
-In the game you have various tools at your disposal. Some tools you will
-have to steal from remote systems first.
+In the game you have various tools at your disposal. Some tools you will have to steal from remote systems first.
 
 
 Button     Function
 ------     --------
    
-Inbox    : This is your email inbox. This is where you recieve new
-           assignments. Read these emails well, they contain lots
-           of information you might need during a mission
+Inbox    : This is your email inbox. This is where you recieve new assignments. Read these emails well, they contain lots of information you might need during a mission
 
-Ping     : After you've read the mail, you will need to confirm if your
-           target is online. You do this by using the Ping button. Enter
-           the target IP address and ping it. Your computer will try to
-           to contact the remote computer, and will tell you if it's
-           online
+Ping     : After you've read the mail, you will need to confirm if your target is online. You do this by using the Ping button. Enter the target IP address and ping it. Your computer will try to to contact the remote computer, and will tell you if it's online
 
-Portscan : With portscan you can scan a verified IP address for open 
-           exploitable ports. Press the Portscan button and enter the
-           target IP address, along with the scanning range. The range
-           must be between 2000 and 4000 (usually it's best to enter these
-           values)
+Portscan : With portscan you can scan a verified IP address for open exploitable ports. Press the Portscan button and enter the target IP address, along with the scanning range. The range must be between 2000 and 4000 (usually it's best to enter these values)
 
-SSH      : When you know the target IP address AND an exploitable open port,
-           you can use SSH to connect to the target system
+SSH      : When you know the target IP address AND an exploitable open port, you can use SSH to connect to the target system
 
-Password : With this you can hack the password of a remote host by using brute
-           force. When you connect to telnet but don't know the password, use
-           this tool
+Password : With this you can hack the password of a remote host by using brute force. When you connect to SSH but don't know the password, use this tool
 
-Virus    : This uploads and installs a virus on the remote host. You need to be
-           in a telnet session to use this function. After it uploads it 
-           completely just close the Virus window, the console will automaticly
-           install the uploaded virus
+Virus    : This uploads and installs a virus on the remote host. You need to be in a SSH session to use this function. After it uploads it completely just close the Virus window, the console will automaticly install the uploaded virus
 
-Get File : When in a telnet session, you can browse the target system by using
-           dos commands like DIR and CD (see "Console Commands"). When you find
-           a file you want to copy, click Get File. Input the filename, and 
-           if the file is found in the current folder, it will start to 
-           download it.
+Get File : When in a SSH session, you can browse the target system by using dos commands like DIR and CD (see "Console Commands"). When you find a file you want to copy, click Get File. Input the filename, and if the file is found in the current folder, it will start to download it.
+            The file is downloaded to your own (virtual) harddisk. All downloads are placed in the folder called Downloads
 
-           The file is downloaded to your own (virtual) harddisk. All downloads
-           are placed in the folder called Downloads
-
-Kill File: To destroy a file simply click Kill File. Input the filename and it
-           will destroy the file, if it's found in the current folder
+Kill File: To destroy a file simply click Kill File. Input the filename and it will destroy the file, if it's found in the current folder
 
 
 Console commands
@@ -88,15 +50,13 @@ Console commands
 PING <ip address>
    For example: ping 127.0.0.1
 
-   A ping sends packages to a remote host. If it's online, it will respond. This 
-   way you can find out if your target is online
+   A ping sends packages to a remote host. If it's online, it will respond. This  way you can find out if your target is online
 
 
 SSH <ip address> <port>
-   For example: telnet 127.0.0.1 21
+   For example: SSH 127.0.0.1 21
 
-   This let's you connect to a remote host on an open port. After you bypass the
-   login system, you can browse the target system
+   This let's you connect to a remote host on an open port. After you bypass the login system, you can browse the target system
 
 
 DIR (or LS)
@@ -107,15 +67,13 @@ DIR (or LS)
    Windows <DIR>
    Logs <DIR>
 
-   Where "Command.com" and "Io.sys" are files, and "Windows" and "Logs" are
-   folders
+   Where "Command.com" and "Io.sys" are files, and "Windows" and "Logs" are folders
 
 
 CD <foldername>
    For example: cd Windows
 
-   This changes the folder you are viewing. After giving this command you can use
-   the DIR command to see what files are in the folder
+   This changes the folder you are viewing. After giving this command you can use the DIR command to see what files are in the folder
 
    To go back to the document root use on of these commands:
    CD ..
@@ -127,8 +85,7 @@ CD <foldername>
 MD <foldername> (or MKDIR)
    For example: mk myfiles
 
-   This creates a new folder in the root of the file structure. You cannot make a
-   folder inside of another folder (yet)
+   This creates a new folder in the root of the file structure. You cannot make a folder inside of another folder (yet)
 
 
 DEL <filename> (or RM)
@@ -146,10 +103,7 @@ CLS
 
 
 SAVE
-   Saves the current state of the game. Including the changes you made in your 
-   local filesystem. The save-file is labeled with your handle/loginname. So
-   if you played the game as "hax0r", you need to login the next time with the
-   same name, to use the LOAD command to restore your own game
+   Saves the current state of the game. Including the changes you made in your local filesystem. The save-file is labeled with your handle/loginname. So if you played the game as "hax0r", you need to login the next time with the same name, to use the LOAD command to restore your own game
 
 
 LOAD
@@ -168,9 +122,7 @@ SHUTDOWN
 Installing tools from the commandline
 -------------------------------------
 
-After you download a tool with the download command from a remote computer and
-go offline, you can install the tool on your own local system. Just navigate
-to the downloads folder and enter the name of the tool.
+After you download a tool with the download command from a remote computer and go offline, you can install the tool on your own local system. Just navigate to the downloads folder and enter the name of the tool.
 
 Example:
 cd ..
@@ -184,7 +136,4 @@ PortscannerW32.exe
 Disclaimer
 ----------
 
-This game is a simulation game. I didn't make this game to promote hacking, 
-just as Nintendo didn't make Super Mario to promote you to jump on peoples 
-heads. Seriously, this game is made for fun. It's probably not even close
-to the read thing.
+This game is a simulation game. I didn't make this game to promote hacking, just as Nintendo didn't make Super Mario to promote you to jump on peoples heads. Seriously, this game is made for fun. It's probably not even close to the read thing.

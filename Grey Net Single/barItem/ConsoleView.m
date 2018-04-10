@@ -10,6 +10,7 @@
 #import "IQKeyboardManager.h"
 #import "PingView.h"
 #import "SSHView.h"
+#import "HelpPageView.h"
 #import "CommandList.h"
 #define SCREEN_W [UIScreen mainScreen].bounds.size.width    //屏幕宽度
 #define SCREEN_H [UIScreen mainScreen].bounds.size.height   //屏幕高度
@@ -97,6 +98,13 @@ replacementText:(NSString *)text
         } else if ([temp hasPrefix:@"ssh"] || [temp hasPrefix:@"SSH"] || [temp hasPrefix:@"Ssh"]){
             NSLog(@"包含ssh字符");
             SSHView * vc = [[SSHView alloc]init];
+            [self.navigationController pushViewController:vc animated:YES];
+            //进入后回车
+            NSString * temp2 = [@"\n" stringByAppendingString:currentUserName];
+            commandTV.text = [commandTV.text stringByAppendingString:temp2];
+        } else if ([temp hasPrefix:@"help"] || [temp hasPrefix:@"Help"]){
+            NSLog(@"包含help字符");
+            HelpPageView * vc = [[HelpPageView alloc]init];
             [self.navigationController pushViewController:vc animated:YES];
             //进入后回车
             NSString * temp2 = [@"\n" stringByAppendingString:currentUserName];
