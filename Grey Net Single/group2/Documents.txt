@@ -34,14 +34,7 @@ Portscan : With portscan you can scan a verified IP address for open exploitable
 
 SSH      : When you know the target IP address AND an exploitable open port, you can use SSH to connect to the target system
 
-Password : With this you can hack the password of a remote host by using brute force. When you connect to SSH but don't know the password, use this tool
-
-Virus    : This uploads and installs a virus on the remote host. You need to be in a SSH session to use this function. After it uploads it completely just close the Virus window, the console will automaticly install the uploaded virus
-
-Get File : When in a SSH session, you can browse the target system by using dos commands like DIR and CD (see "Console Commands"). When you find a file you want to copy, click Get File. Input the filename, and if the file is found in the current folder, it will start to download it.
-            The file is downloaded to your own (virtual) harddisk. All downloads are placed in the folder called Downloads
-
-Kill File: To destroy a file simply click Kill File. Input the filename and it will destroy the file, if it's found in the current folder
+flag : When you know this code in the system,  you can pass this level.
 
 
 Console commands
@@ -82,33 +75,11 @@ CD <foldername>
    CD\
 
 
-MD <foldername> (or MKDIR)
-   For example: mk myfiles
-
-   This creates a new folder in the root of the file structure. You cannot make a folder inside of another folder (yet)
-
-
-DEL <filename> (or RM)
-   For example: del command.com
-
-   This let's you delete a file in the current folder. This can not be undone.
-
-
-IPCONFIG
-   This shows amongst other things your own IP address
-  
     
-CLS
-   This clears the screen
+CAT
+   Shows file content
 
 
-SAVE
-   Saves the current state of the game. Including the changes you made in your local filesystem. The save-file is labeled with your handle/loginname. So if you played the game as "hax0r", you need to login the next time with the same name, to use the LOAD command to restore your own game
-
-
-LOAD
-   Loads the last SAVED game found with your handle/loginname
-   
 
 HELP
    Shows this text
@@ -132,8 +103,3 @@ PortscannerW32.exe
 *press enter after each command
 
 
-----------
-Disclaimer
-----------
-
-This game is a simulation game. I didn't make this game to promote hacking, just as Nintendo didn't make Super Mario to promote you to jump on peoples heads. Seriously, this game is made for fun. It's probably not even close to the read thing.

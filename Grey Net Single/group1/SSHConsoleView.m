@@ -23,6 +23,7 @@
 @property (nonatomic) NSInteger mUMissionProgress;
 @property (nonatomic) NSString * admin;
 @property (nonatomic) NSString * pw;
+@property (nonatomic) NSString * flag;
 @property (nonatomic) BOOL isAdminCorrect;
 @property (nonatomic) BOOL isPasswordCorrect;
 
@@ -80,10 +81,12 @@
         NSInteger uMissionProgress = [resultMission intForColumn:@"missionProgress"];
         NSString * admin = [resultMission stringForColumn:@"admin"];
         NSString * pw = [resultMission stringForColumn:@"password"];
-        NSLog(@"missionID:%@, missionIndex:%ld, missionProgress:%ld, admin:%@, password:%@",missionID,uMissionIndex,uMissionProgress,admin,pw);
+        NSString * tempFlag = [resultMission stringForColumn:@"flag"];
+        NSLog(@"missionID:%@, missionIndex:%ld, missionProgress:%ld, admin:%@, password:%@ , flag:%@",missionID,uMissionIndex,uMissionProgress,admin,pw, tempFlag);
         if(uMissionProgress == _mUMissionProgress && uMissionIndex == _mUMissionIndex){
             _admin = admin;
             _pw = pw;
+            _flag = [resultMission stringForColumn:@"flag"];
         }
     }
 }
@@ -170,6 +173,16 @@ replacementText:(NSString *)text
                 //调用cd
                 [cmd CommandCd:tempStr];
                 commandTV.text = @"";
+            } else if(_isAdminCorrect && _isPasswordCorrect && ([textView.text hasPrefix:@"cat"] || [textView.text hasPrefix:@"Cat"])){
+                NSLog(@"包含cat字符");
+                NSString * tempStr;
+                tempStr = textView.text;
+                if([tempStr length]<=3){
+                    NSLog(@"error,cat命令长度不足");
+                    return YES;
+                }
+                tempStr = [tempStr substringFromIndex:4];
+                commandTV.text = _flag;
             } else {
                 commandTV.text = @"can't understand this command";
             }

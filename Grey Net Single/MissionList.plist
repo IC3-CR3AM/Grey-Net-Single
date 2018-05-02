@@ -18,12 +18,9 @@
 I have high expectations of you, your computer skills are much higher than
 Normal, so I guess you can get at least 2 levels.
 
-Your first goal is to get a port scanning tool. I know
-You can find such a tool on a computer. You need to enter
-Invasion of the system can obtain this tool.
-
-The file name of the tool is: PortScannerW32.exe
-It should be in a folder called Tools.
+Your first goal is to get a flag. I know
+You can find it on a computer. You need to enter
+Invasion of the system can obtain it.
 
 Here are some of the data you need for this task:
 His IP address: 192.168.1.1
@@ -34,10 +31,6 @@ Password : admin
 First Ping his IP address to see if he is online.
 Then use his IP and port to remotely log into his computer.
 Steal to file and leave quickly!
-
-!! Attention !!
-Do not forget to delete the log file in the TelnetLogs folder.
-What you should delete is: 176.158.255.1
 
 Good luck. If you succeed, I will send you an email again.</string>
 		<key>name</key>
@@ -56,11 +49,11 @@ Good luck. If you succeed, I will send you an email again.</string>
 		<key>ip</key>
 		<string>192.168.1.1</string>
 		<key>mail</key>
-		<string>It is a mail test1</string>
+		<string>Congratulation!</string>
 		<key>name</key>
-		<string>John</string>
+		<string>Anonymous</string>
 		<key>title</key>
-		<string>mission1 title</string>
+		<string>Second</string>
 	</dict>
 </dict>
 </plist>
