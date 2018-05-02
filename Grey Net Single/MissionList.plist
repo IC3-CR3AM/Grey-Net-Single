@@ -13,33 +13,33 @@
 		<key>ip</key>
 		<string>192.168.1.1</string>
 		<key>mail</key>
-		<string>您好,
+		<string>Hello,
 
-我对你寄予很高的期望, 您的计算机技能远高于
-正常, 所以我猜你至少可以过2关.
+I have high expectations of you, your computer skills are much higher than
+Normal, so I guess you can get at least 2 levels.
 
-您的第一个目标是获得一个端口扫描工具。我知
-道一台计算机上可以找到这样的工具。您需要入
-侵该系统才能获得这一工具。 
+Your first goal is to get a port scanning tool. I know
+You can find such a tool on a computer. You need to enter
+Invasion of the system can obtain this tool.
 
-工具的文件名是: PortScannerW32.exe
-它应该在一个名叫Tools的文件夹中。
+The file name of the tool is: PortScannerW32.exe
+It should be in a folder called Tools.
 
-以下是这项任务中你所需要的一些数据:
-他的IP地址:192.168.1.1 
-开放端口   : 8080
-用户名      : admin
-密   码      : admin
+Here are some of the data you need for this task:
+His IP address: 192.168.1.1
+Open port : 8080
+Username : admin
+Password : admin
 
-首先Ping他的IP地址看看他是否在线。
-然后用他的IP和端口远程登陆到他的电脑，
-窃取到文件后迅速离开！
+First Ping his IP address to see if he is online.
+Then use his IP and port to remotely log into his computer.
+Steal to file and leave quickly!
 
-!! 注意 !!
-不要忘记删除TelnetLogs文件夹中的日志文件。
-你应该删除的是: 176.158.255.1
+!! Attention !!
+Do not forget to delete the log file in the TelnetLogs folder.
+What you should delete is: 176.158.255.1
 
-祝您好运。如果你成功了，我将再次向您发送电子邮件。</string>
+Good luck. If you succeed, I will send you an email again.</string>
 		<key>name</key>
 		<string>Anonymous</string>
 		<key>title</key>

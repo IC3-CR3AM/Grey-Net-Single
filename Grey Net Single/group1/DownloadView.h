@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseView.h"
 
-@interface DownloadView : BaseView
+@interface DownloadView : BaseView <UITextFieldDelegate>
+@property UITextField * ipTF;
 
 @end

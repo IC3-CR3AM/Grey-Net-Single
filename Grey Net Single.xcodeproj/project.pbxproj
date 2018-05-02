@@ -42,6 +42,13 @@
 		D848DDA7207C8E91004A330E /* Documents.txt in Resources */ = {isa = PBXBuildFile; fileRef = D848DDA6207C8E91004A330E /* Documents.txt */; };
 		D85DBAAB207520EC00316B8A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D85DBAAA207520EC00316B8A /* AVFoundation.framework */; };
 		D85DBAAD2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */; };
+		D869D115208A2EBF002DB1E5 /* download.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D869D10F208A2EBE002DB1E5 /* download.jpg */; };
+		D869D116208A2EBF002DB1E5 /* help.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D869D110208A2EBF002DB1E5 /* help.jpg */; };
+		D869D117208A2EBF002DB1E5 /* music.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D869D111208A2EBF002DB1E5 /* music.jpg */; };
+		D869D118208A2EBF002DB1E5 /* ssh.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D869D112208A2EBF002DB1E5 /* ssh.jpg */; };
+		D869D119208A2EBF002DB1E5 /* logout.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D869D113208A2EBF002DB1E5 /* logout.jpg */; };
+		D869D11A208A2EBF002DB1E5 /* flag.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D869D114208A2EBF002DB1E5 /* flag.jpg */; };
+		D869D11C208A30B3002DB1E5 /* ping.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D869D11B208A30B3002DB1E5 /* ping.jpg */; };
 		D86A64872037C11B0016244B /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D86A64862037C11B0016244B /* libsqlite3.tbd */; };
 		D86A648A20387BBD0016244B /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = D86A648920387BBD0016244B /* BaseView.m */; };
 		D86E0E152029D23F0075AAE2 /* FCoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D86E0E142029D23F0075AAE2 /* FCoverViewController.m */; };
@@ -173,6 +180,13 @@
 		D85DBAAA207520EC00316B8A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Donna Burke-HEAVENS DIVIDE (Instrumental).mp3"; sourceTree = "<group>"; };
 		D85DBAAF207646E400316B8A /* libFMDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libFMDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D869D10F208A2EBE002DB1E5 /* download.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = download.jpg; sourceTree = "<group>"; };
+		D869D110208A2EBF002DB1E5 /* help.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help.jpg; sourceTree = "<group>"; };
+		D869D111208A2EBF002DB1E5 /* music.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = music.jpg; sourceTree = "<group>"; };
+		D869D112208A2EBF002DB1E5 /* ssh.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ssh.jpg; sourceTree = "<group>"; };
+		D869D113208A2EBF002DB1E5 /* logout.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logout.jpg; sourceTree = "<group>"; };
+		D869D114208A2EBF002DB1E5 /* flag.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flag.jpg; sourceTree = "<group>"; };
+		D869D11B208A30B3002DB1E5 /* ping.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ping.jpg; sourceTree = "<group>"; };
 		D86A64862037C11B0016244B /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D86A648820387BBD0016244B /* BaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		D86A648920387BBD0016244B /* BaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
@@ -527,6 +541,13 @@
 		D86E22781FFC87AE009EA637 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D869D11B208A30B3002DB1E5 /* ping.jpg */,
+				D869D10F208A2EBE002DB1E5 /* download.jpg */,
+				D869D114208A2EBF002DB1E5 /* flag.jpg */,
+				D869D113208A2EBF002DB1E5 /* logout.jpg */,
+				D869D111208A2EBF002DB1E5 /* music.jpg */,
+				D869D110208A2EBF002DB1E5 /* help.jpg */,
+				D869D112208A2EBF002DB1E5 /* ssh.jpg */,
 				D82BFB4A204FB503002CA3F6 /* launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg */,
 				D82BFB46204FAE22002CA3F6 /* confirmButton.png */,
 				D82BFB47204FAE22002CA3F6 /* launchImage.jpg */,
@@ -678,6 +699,8 @@
 				D87779492042AD5E0008D5FF /* MissionFileList.plist in Resources */,
 				D86E22831FFC87D7009EA637 /* 00.jpg in Resources */,
 				D8889C8A204EDDBC00E76A69 /* app_gaitubao_com_76x76.jpg in Resources */,
+				D869D11C208A30B3002DB1E5 /* ping.jpg in Resources */,
+				D869D117208A2EBF002DB1E5 /* music.jpg in Resources */,
 				D8889C8F204EDDBC00E76A69 /* app_gaitubao_com_1024x1024.jpg in Resources */,
 				D8889C7C204ED54F00E76A69 /* app.jpg in Resources */,
 				D8889C87204EDDBC00E76A69 /* app_gaitubao_com_40x40.jpg in Resources */,
@@ -687,9 +710,12 @@
 				D8889C8C204EDDBC00E76A69 /* app_gaitubao_com_152x152.jpg in Resources */,
 				D82BFB48204FAE22002CA3F6 /* confirmButton.png in Resources */,
 				D8889C96204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg in Resources */,
+				D869D118208A2EBF002DB1E5 /* ssh.jpg in Resources */,
 				D86E22851FFC87D7009EA637 /* progress底色.png in Resources */,
 				D85DBAAD2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 in Resources */,
 				D8889C97204EDFEE00E76A69 /* app_gaitubao_com_87x87.jpg in Resources */,
+				D869D116208A2EBF002DB1E5 /* help.jpg in Resources */,
+				D869D115208A2EBF002DB1E5 /* download.jpg in Resources */,
 				D8889C8E204EDDBC00E76A69 /* app_gaitubao_com_29x29.jpg in Resources */,
 				D8889C88204EDDBC00E76A69 /* app_gaitubao_com_58x58.jpg in Resources */,
 				D848DDA7207C8E91004A330E /* Documents.txt in Resources */,
@@ -698,8 +724,10 @@
 				D86E22501FFC855D009EA637 /* Assets.xcassets in Resources */,
 				D8066F6B207681B700362983 /* Zz_白日梦_zZ-初音未来的激唱.mp3 in Resources */,
 				D8889C8D204EDDBC00E76A69 /* app_gaitubao_com_167x167.jpg in Resources */,
+				D869D119208A2EBF002DB1E5 /* logout.jpg in Resources */,
 				D82BFB4B204FB503002CA3F6 /* launchImage_gaitubao_com_1200x2436_gaitubao_com_1125x2436.jpg in Resources */,
 				D86E22821FFC87D7009EA637 /* first_bg.jpg in Resources */,
+				D869D11A208A2EBF002DB1E5 /* flag.jpg in Resources */,
 				D82CD814203C727A00139B0C /* IQKeyboardManager.bundle in Resources */,
 				D8889C77204E980100E76A69 /* MissionList.plist in Resources */,
 			);

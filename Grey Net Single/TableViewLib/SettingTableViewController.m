@@ -39,10 +39,10 @@
 /**第一组*/
 - (void)setupGroup1{
     
-    SettingModel *ping = [SettingArrowModel settingModelWithTitle:@"Ping" andIcon:@"functionButton.png" andDesClass:[PingView class]];
-    SettingModel *ssh = [SettingArrowModel settingModelWithTitle:@"SSH" andIcon:@"functionButton.png" andDesClass:[SSHView class]];
-    SettingModel *downloadTool = [SettingArrowModel settingModelWithTitle:@"Download Tool" andIcon:@"functionButton.png" andDesClass:[DownloadView class]];
-    SettingModel *flagPage = [SettingArrowModel settingModelWithTitle:@"Flag" andIcon:@"functionButton.png" andDesClass:[FlagPageView class]];
+    SettingModel *ping = [SettingArrowModel settingModelWithTitle:@"Ping" andIcon:@"ping.jpg" andDesClass:[PingView class]];
+    SettingModel *ssh = [SettingArrowModel settingModelWithTitle:@"SSH" andIcon:@"ssh.jpg" andDesClass:[SSHView class]];
+    SettingModel *downloadTool = [SettingArrowModel settingModelWithTitle:@"Download Tool" andIcon:@"download.jpg" andDesClass:[DownloadView class]];
+    SettingModel *flagPage = [SettingArrowModel settingModelWithTitle:@"Flag" andIcon:@"flag.jpg" andDesClass:[FlagPageView class]];
 //    SettingModel *sqlmap = [SettingArrowModel settingModelWithTitle:@"Sqlmap" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
     
 //    SettingModel *soundEffect = [SettingArrowModel settingModelWithTitle:@"帮助" andIcon:@"sound_Effect@2x.png" andDesClass:[HelpViewController class]];
@@ -69,21 +69,21 @@
 //        });
         
 //    };
-    SettingModel *music = [SettingSwitchModel settingModelWithTitle:@"Music" andIcon:@"functionButton.png" ];
+    SettingModel *music = [SettingSwitchModel settingModelWithTitle:@"Music" andIcon:@"music.jpg" ];
     music.myBlocks = ^{
         NSLog(@"执行music‘s block");
 //        audioController * ac = [[audioController alloc]init];
 //        [ac createAVPlayer];
 //        [ac playMusic];
     };
-    SettingModel *help = [SettingArrowModel settingModelWithTitle:@"HELP" andIcon:@"functionButton.png" andDesClass:[HelpPageView class]];
+    SettingModel *help = [SettingArrowModel settingModelWithTitle:@"HELP" andIcon:@"help.jpg" andDesClass:[HelpPageView class]];
     Group *group = [[Group alloc] init];
     group.items = @[music,help];
     [self.dataArray addObject:group];
 }
 //第三组
 -(void)setupGroup3{
-    SettingModel *logout = [SettingArrowModel settingModelWithTitle:@"Logout" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
+    SettingModel *logout = [SettingArrowModel settingModelWithTitle:@"Logout" andIcon:@"logout.jpg" andDesClass:[FCoverViewController class]];
     Group *group = [[Group alloc] init];
     group.items = @[logout];
     
