@@ -66,6 +66,8 @@
 		D86E22861FFC87D7009EA637 /* functionButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D86E227F1FFC87D7009EA637 /* functionButton.png */; };
 		D87779492042AD5E0008D5FF /* MissionFileList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D87779482042AD5E0008D5FF /* MissionFileList.plist */; };
 		D877794C2042AE4C0008D5FF /* CommandList.m in Sources */ = {isa = PBXBuildFile; fileRef = D877794B2042AE4C0008D5FF /* CommandList.m */; };
+		D87D521D20A9A2BD00DE4134 /* PortScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D87D521C20A9A2BD00DE4134 /* PortScannerView.m */; };
+		D87D522220A9D06900DE4134 /* Daft Punk - Touch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D87D522120A9D06900DE4134 /* Daft Punk - Touch.mp3 */; };
 		D8889C77204E980100E76A69 /* MissionList.plist in Resources */ = {isa = PBXBuildFile; fileRef = D8889C76204E980100E76A69 /* MissionList.plist */; };
 		D8889C7A204E9D1000E76A69 /* InputMissionInDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = D8889C79204E9D1000E76A69 /* InputMissionInDatabase.m */; };
 		D8889C7C204ED54F00E76A69 /* app.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D8889C7B204ED54F00E76A69 /* app.jpg */; };
@@ -214,6 +216,9 @@
 		D87779482042AD5E0008D5FF /* MissionFileList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MissionFileList.plist; sourceTree = "<group>"; };
 		D877794A2042AE4C0008D5FF /* CommandList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommandList.h; sourceTree = "<group>"; };
 		D877794B2042AE4C0008D5FF /* CommandList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommandList.m; sourceTree = "<group>"; };
+		D87D521B20A9A2BD00DE4134 /* PortScannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PortScannerView.h; sourceTree = "<group>"; };
+		D87D521C20A9A2BD00DE4134 /* PortScannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PortScannerView.m; sourceTree = "<group>"; };
+		D87D522120A9D06900DE4134 /* Daft Punk - Touch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Daft Punk - Touch.mp3"; sourceTree = "<group>"; };
 		D8889C76204E980100E76A69 /* MissionList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MissionList.plist; sourceTree = "<group>"; };
 		D8889C78204E9D1000E76A69 /* InputMissionInDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputMissionInDatabase.h; sourceTree = "<group>"; };
 		D8889C79204E9D1000E76A69 /* InputMissionInDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputMissionInDatabase.m; sourceTree = "<group>"; };
@@ -305,6 +310,7 @@
 		D8066F5B2076764600362983 /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				D87D522120A9D06900DE4134 /* Daft Punk - Touch.mp3 */,
 				D8066F6A207681B700362983 /* Zz_白日梦_zZ-初音未来的激唱.mp3 */,
 				D85DBAAC2076411B00316B8A /* Donna Burke-HEAVENS DIVIDE (Instrumental).mp3 */,
 			);
@@ -324,6 +330,8 @@
 				D82CD81E203C886400139B0C /* DownloadView.m */,
 				D80F07882073C88500022F23 /* FlagPageView.h */,
 				D80F07892073C88600022F23 /* FlagPageView.m */,
+				D87D521B20A9A2BD00DE4134 /* PortScannerView.h */,
+				D87D521C20A9A2BD00DE4134 /* PortScannerView.m */,
 			);
 			path = group1;
 			sourceTree = "<group>";
@@ -708,6 +716,7 @@
 				D8889C8B204EDDBC00E76A69 /* app_gaitubao_com_20x20.jpg in Resources */,
 				D86E22861FFC87D7009EA637 /* functionButton.png in Resources */,
 				D8889C8C204EDDBC00E76A69 /* app_gaitubao_com_152x152.jpg in Resources */,
+				D87D522220A9D06900DE4134 /* Daft Punk - Touch.mp3 in Resources */,
 				D82BFB48204FAE22002CA3F6 /* confirmButton.png in Resources */,
 				D8889C96204EDFEE00E76A69 /* app_gaitubao_com_180x180.jpg in Resources */,
 				D869D118208A2EBF002DB1E5 /* ssh.jpg in Resources */,
@@ -813,6 +822,7 @@
 				D8889C7A204E9D1000E76A69 /* InputMissionInDatabase.m in Sources */,
 				D82CD80F203C727A00139B0C /* IQToolbar.m in Sources */,
 				D8F7158C202C1D8400249E77 /* Group.m in Sources */,
+				D87D521D20A9A2BD00DE4134 /* PortScannerView.m in Sources */,
 				D81E3A692039A731002A7B37 /* UITabBar+DKSTabBar.m in Sources */,
 				D82CD81C203C727A00139B0C /* IQKeyboardReturnKeyHandler.m in Sources */,
 				D82CD812203C727A00139B0C /* IQUIView+IQKeyboardToolbar.m in Sources */,

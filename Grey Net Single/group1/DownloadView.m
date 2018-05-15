@@ -8,11 +8,18 @@
 
 #import "DownloadView.h"
 #import "WKProgressBarLayer.h"
+#import <FMDatabase.h>
+//#import "SettingTableViewController.h"
 
-@interface DownloadView ()
+
+@interface DownloadView (){
+    NSUserDefaults * downloadFileDefault;
+}
 
 @property (nonatomic, strong) WKProgressBarLayer *progressLayer;
-
+@property (nonatomic) NSString * mUserID;
+@property (nonatomic) NSInteger mUMissionIndex;
+@property (nonatomic) NSInteger mUMissionProgress;
 
 @end
 
@@ -21,6 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//    [SettingTableViewController alloc];
+    //单利
+    downloadFileDefault = [NSUserDefaults standardUserDefaults];
+    
     //title
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 200, 44)];
     //    titleLabel.backgroundColor = [UIColor grayColor];
@@ -53,6 +64,57 @@
     [_ipTF setMinimumFontSize:18];
     [_ipTF setDelegate:self];
     
+    //--------------------------数据查询部分---------------------------------------------------------------
+    //create sqlite database
+    NSString * strPath = [NSHomeDirectory() stringByAppendingString:@"/Documents/greyNetDB.db"];
+    NSLog(@"%@", strPath);
+    FMDatabase * _db = [FMDatabase databaseWithPath:strPath];
+    if(_db != nil){
+        NSLog(@"数据库存在");
+    }
+    BOOL isOpen = [_db open];
+    if(isOpen){
+        NSLog(@"数据库打开成功");
+    }
+    //NSUserdefault 存储当前用户对象
+    NSUserDefaults *currentUser = [NSUserDefaults standardUserDefaults];
+    NSString * resultID = [currentUser stringForKey:@"currentUser"];
+    NSLog(@"current user:%@......................",resultID);
+    //查询
+    NSString * strQuerry = [@"select * from user where uid = '" stringByAppendingFormat:@"%@'",resultID ];
+    FMResultSet * result = [_db executeQuery:strQuerry];
+    while([result next]){
+        NSString * uid = [result stringForColumn:@"uid"];
+        NSInteger uMissionIndex = [result intForColumn:@"missionIndex"];
+        NSInteger uMissionProgress = [result intForColumn:@"missionProgress"];
+        
+        NSLog(@"user id:%@, missionIndex:%ld, missionProgress:%ld",uid,uMissionIndex,uMissionProgress);
+        _mUserID = uid;
+        _mUMissionIndex = uMissionIndex;
+        _mUMissionProgress = uMissionProgress;
+        NSLog(@"_mUserID:%@, _mUMissionIndex:%ld, _mUMissionProgress:%ld",_mUserID,_mUMissionIndex,_mUMissionProgress);
+    }
+    //查询任务信息
+    NSString * strQuerryMission = @"select * from mission";
+    FMResultSet * resultMission = [_db executeQuery:strQuerryMission];
+    NSLog(@"查询任务信息。。。。。。。。。。。");
+    while([resultMission next]){
+        NSString * missionID = [resultMission stringForColumn:@"id"];
+        NSInteger uMissionIndex = [resultMission intForColumn:@"missionIndex"];
+        NSInteger uMissionProgress = [resultMission intForColumn:@"missionProgress"];
+        NSString * admin = [resultMission stringForColumn:@"admin"];
+        NSString * pw = [resultMission stringForColumn:@"password"];
+        NSString * tempFlag = [resultMission stringForColumn:@"flag"];
+        NSLog(@"missionID:%@, missionIndex:%ld, missionProgress:%ld, admin:%@, password:%@ , flag:%@",missionID,uMissionIndex,uMissionProgress,admin,pw, tempFlag);
+        if(uMissionProgress == _mUMissionProgress && uMissionIndex == _mUMissionIndex){
+            if(uMissionIndex == 0){
+                _downloadFile = @"portScanner";
+            } else if(uMissionIndex == 1){
+                _downloadFile = @"fileDestroy";
+            }
+        }
+    }
+    
     //progress 进度条以及位置
     WKProgressBarLayer *progressLayer = [[WKProgressBarLayer alloc] init];
     progressLayer.frame = CGRectMake(100, 200, 200, 10);
@@ -67,17 +129,19 @@
 }
 //按回车将键盘回收
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
-    //开始下载
-    [self.progressLayer beginAnimationWithDuration:10];
-    
     if(textField == _ipTF){
         [_ipTF resignFirstResponder];
     }
     //需要修改
-    if([_ipTF.text isEqualToString:@""]){
+    if([_ipTF.text isEqualToString:_downloadFile]){
         NSLog(@"file正确");
+        //放入单利
+        [downloadFileDefault setObject:_downloadFile forKey:@"downloadFileName"];
+        //开始下载
+        [self.progressLayer beginAnimationWithDuration:10];
     } else {
         NSLog(@"file错误");
+        
     }
     NSLog(@"回收键盘");
     return YES;

@@ -236,7 +236,7 @@
 }
 //多少行
 -(NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-    return 2;
+    return 1;
 }
 
 //设置pickerView cell高
@@ -251,11 +251,11 @@
     NSString* str = [NSString stringWithFormat:@"%ld列%ld行",(long)component,(long)row];
     switch (row) {
         case 0:
-            str = @"First Chapter";
+            str = @"Beginning";
             break;
-        case 1:
-            str = @"Second Chapter";
-            break;
+//        case 1:
+//            str = @"Second Chapter";
+//            break;
         default:
             break;
     }

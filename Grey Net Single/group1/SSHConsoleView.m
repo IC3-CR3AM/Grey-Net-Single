@@ -177,11 +177,11 @@ replacementText:(NSString *)text
                 NSLog(@"包含cat字符");
                 NSString * tempStr;
                 tempStr = textView.text;
-                if([tempStr length]<=3){
+                if([tempStr length]<3){
                     NSLog(@"error,cat命令长度不足");
                     return YES;
                 }
-                tempStr = [tempStr substringFromIndex:4];
+//                tempStr = [tempStr substringFromIndex:4];
                 commandTV.text = _flag;
             } else {
                 commandTV.text = @"can't understand this command";

@@ -9,28 +9,35 @@
 		<key>username</key>
 		<string>admin</string>
 		<key>port</key>
-		<string>8080</string>
+		<string>23</string>
 		<key>ip</key>
-		<string>192.168.1.1</string>
+		<string>192.168.1.100</string>
 		<key>mail</key>
 		<string>Hello,
 
 I have high expectations of you, your computer skills are much higher than
 Normal, so I guess you can get at least 2 levels.
 
-Your first goal is to get a flag. I know
-You can find it on a computer. You need to enter
-Invasion of the system can obtain it.
+Your first goal is to get a port scanning tool. I know
+You can find such a tool on a computer. You need to enter
+Invasion of the system can obtain this tool.
+
+The file name of the tool is: portScanner
+It should be in a folder called HackTools.
 
 Here are some of the data you need for this task:
-His IP address: 192.168.1.1
-Open port : 8080
+His IP address: 192.168.1.100
+Open port : 23
 Username : admin
 Password : admin
 
 First Ping his IP address to see if he is online.
 Then use his IP and port to remotely log into his computer.
 Steal to file and leave quickly!
+
+!! Attention !!
+Do not forget to delete the log file in the folder.
+What you should remove is: 192.168.1.1
 
 Good luck. If you succeed, I will send you an email again.</string>
 		<key>name</key>
@@ -39,6 +46,221 @@ Good luck. If you succeed, I will send you an email again.</string>
 		<string>First Mission</string>
 	</dict>
 	<key>mission1</key>
+	<dict>
+		<key>password</key>
+		<string>nimda</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>23</string>
+		<key>ip</key>
+		<string>192.168.1.101</string>
+		<key>mail</key>
+		<string>Good job,
+
+Well, you got the portScanner.
+
+The next tool you need is fileDestroy.
+
+I know there is only one place where you can get it. Abandonned text
+Servers, that&apos;s where I used to work. This is the person who remembers
+Some of the data:
+
+IP address : 192.168.1.101
+Port : 500
+Username : admin
+Password : nimda
+
+The file you need to download is destroyFile
+But I don&apos;t know what folder it is in. You must find it.
+But there are programs to track you, not to be caught!
+
+After you download it, you can install it like portscanner
+Install it. It is automatically added to your hacking toolbar.
+
+Don&apos;t forget your delete log! ! ! Good luck.
+If you succeed, I will contact you again.</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Second</string>
+	</dict>
+	<key>mission2</key>
+	<dict>
+		<key>password</key>
+		<string>anonymity</string>
+		<key>username</key>
+		<string>user</string>
+		<key>port</key>
+		<string>5050</string>
+		<key>ip</key>
+		<string>221.255.1.1</string>
+		<key>mail</key>
+		<string>Well done!
+
+It seems that your proficiency is very suitable for me to do real hacking
+jobs.
+
+A stupid person stole a document from someone else.
+I don&apos;t want to know the details, I just need you to delete it.
+
+The file I want to delete is FBI_snatchlist.doc, which is
+Save it somewhere on your hard drive, find it, and delete it.
+
+And when you&apos;re there, you&apos;d better destroy his Windows
+System, remove win.com from windows folder&gt;:)
+
+Here is the data you need:
+IP address : 221.255.1.1
+Port : Unknown
+Username : user
+Password : anonymity
+
+If you succeed, I will advertise your name, so
+In the future, if strangers contact you for hacking work, please do not
+Be surprised.</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Third</string>
+	</dict>
+	<key>mission3</key>
+	<dict>
+		<key>password</key>
+		<string>random</string>
+		<key>username</key>
+		<string>random</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>101.133.1.25</string>
+		<key>mail</key>
+		<string>I learned something about you from my friends.
+I really need your help now.
+
+A few minutes ago a group of idiots attacked my server with a lot of DRDoS.
+Fortunately I was very smart redirected to 127.0.0.1. My server is
+It survived the attack, but it did not end.
+
+This is their main IP address 101.133.1.25
+
+Let me see if you can send their DRDoS project (plan)
+give me. And destroy it after you steal it so they don’t
+Can hurt us again.
+
+I get the login data for you:
+Username is random
+The password may be random
+
+Now it&apos;s as if I&apos;ve proven what a real hack is!</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Help</string>
+	</dict>
+	<key>mission4</key>
+	<dict>
+		<key>password</key>
+		<string>admin</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>192.168.1.1</string>
+		<key>mail</key>
+		<string>Congratulation!</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Second</string>
+	</dict>
+	<key>mission5</key>
+	<dict>
+		<key>password</key>
+		<string>admin</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>192.168.1.1</string>
+		<key>mail</key>
+		<string>Congratulation!</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Second</string>
+	</dict>
+	<key>mission6</key>
+	<dict>
+		<key>password</key>
+		<string>admin</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>192.168.1.1</string>
+		<key>mail</key>
+		<string>Congratulation!</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Second</string>
+	</dict>
+	<key>mission7</key>
+	<dict>
+		<key>password</key>
+		<string>admin</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>192.168.1.1</string>
+		<key>mail</key>
+		<string>Congratulation!</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Second</string>
+	</dict>
+	<key>mission8</key>
+	<dict>
+		<key>password</key>
+		<string>admin</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>192.168.1.1</string>
+		<key>mail</key>
+		<string>Congratulation!</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Second</string>
+	</dict>
+	<key>mission9</key>
+	<dict>
+		<key>password</key>
+		<string>admin</string>
+		<key>username</key>
+		<string>admin</string>
+		<key>port</key>
+		<string>8080</string>
+		<key>ip</key>
+		<string>192.168.1.1</string>
+		<key>mail</key>
+		<string>Congratulation!</string>
+		<key>name</key>
+		<string>Anonymous</string>
+		<key>title</key>
+		<string>Second</string>
+	</dict>
+	<key>mission10</key>
 	<dict>
 		<key>password</key>
 		<string>admin</string>

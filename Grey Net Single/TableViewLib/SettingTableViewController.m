@@ -20,8 +20,9 @@
 #import "FlagPageView.h"
 #import "HelpPageView.h"
 
-@interface SettingTableViewController ()
+extern NSString * addItem;
 
+@interface SettingTableViewController ()
 @end
 
 @implementation SettingTableViewController
@@ -38,18 +39,22 @@
 #pragma mark--下载数据源
 /**第一组*/
 - (void)setupGroup1{
-    
+//    DownloadView * dlv = [[DownloadView alloc]init];
     SettingModel *ping = [SettingArrowModel settingModelWithTitle:@"Ping" andIcon:@"ping.jpg" andDesClass:[PingView class]];
     SettingModel *ssh = [SettingArrowModel settingModelWithTitle:@"SSH" andIcon:@"ssh.jpg" andDesClass:[SSHView class]];
     SettingModel *downloadTool = [SettingArrowModel settingModelWithTitle:@"Download Tool" andIcon:@"download.jpg" andDesClass:[DownloadView class]];
     SettingModel *flagPage = [SettingArrowModel settingModelWithTitle:@"Flag" andIcon:@"flag.jpg" andDesClass:[FlagPageView class]];
+//    SettingModel *portScannerPage = [SettingArrowModel settingModelWithTitle:@"Flag" andIcon:@"functionButton.png" andDesClass:[FlagPageView class]];
 //    SettingModel *sqlmap = [SettingArrowModel settingModelWithTitle:@"Sqlmap" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
     
-//    SettingModel *soundEffect = [SettingArrowModel settingModelWithTitle:@"帮助" andIcon:@"sound_Effect@2x.png" andDesClass:[HelpViewController class]];
     Group *group = [[Group alloc] init];
     group.items = @[ping,ssh,downloadTool,flagPage];
-
     [self.dataArray addObject:group];
+
+//    if([dlv.downloadFile isEqualToString:@"portScanner"]){
+//        [self.dataArray insertObject:portScannerPage atIndex:4];
+//    }
+
 }
 /**第二组*/
 - (void)setupGroup2{

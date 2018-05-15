@@ -16,6 +16,11 @@
 #import "FCoverViewController.h"
 #import "InboxView.h"
 #import "ConsoleView.h"
+#import "DownloadView.h"
+#import "PortScannerView.h"
+#import "PingView.h"
+#import "SSHView.h"
+#import "FlagPageView.h"
 //#import "audioController.h" //音乐控制
 
 
@@ -163,6 +168,28 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //引入下载页
+//    SettingModel * portScannerPage = [SettingArrowModel settingModelWithTitle:@"PortScanner" andIcon:@"functionButton.png" andDesClass:[PortScannerView class]];
+//    Group * tempGroup = [[Group alloc] init];
+//    Group* tempGroup2 =[self setupGroup1];
+
+//    tempGroup.items = [[NSArray alloc]initWithObjects:tempGroup2.items,portScannerPage, nil];
+    NSIndexPath * path = [NSIndexPath indexPathForItem:(indexPath.row+1) inSection:indexPath.section];
+
+    if([[self getValueInDownloadFile] isEqualToString:@"portScanner"]){
+//        tempGroup.items = [[NSArray alloc]initWithObjects:tempGroup2.items,portScannerPage, nil];
+//        [self.dataArray replaceObjectAtIndex:0 withObject:tempGroup];
+        NSLog(@"got value and start to insert");
+        NSLog(@"dataArray:%@",self.dataArray);
+    } else {
+//        tempGroup.items = [[NSArray alloc]initWithObjects:tempGroup2.items, nil];
+    }
+    
+//    [self.dataArray insertObject:tempGroup atIndex:self.dataArray.count];
+//    [self.dataArray replaceObjectAtIndex:0 withObject:tempGroup];
+    NSLog(@"got value and start to insert");
+    NSLog(@"dataArray:%@",self.dataArray);
+    
     /**1.3.1 点击cell后,立即取消选中,即点击后,马上灰色部分消失*/
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     /**1.3.2 取出数据模型*/
@@ -192,22 +219,38 @@
             NSLog(@"从mainview切换到 navigarion");
         }
     }
-    
-//    //获取switch里的判断
-//    if([items isKindOfClass:[SettingSwitchModel class]]){
-//        NSLog(@"is SettingSwitchModel");
-//        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//        NSLog(@"this cell:%@",cell);
-//        NSLog(@"this cell.accessoryView:%d",((UISwitch *)cell.accessoryView).isOn);
-//
-//        if(((UISwitch *)cell.accessoryView).isOn){
-//            [ac playMusic];
-//        } else {
-//            [ac stopMusic];
-//        }
-//    }
+    //更新update
+//    [self.tableView beginUpdates];
+//    [self.tableView insertRowsAtIndexPaths:path withRowAnimation:UITableViewRowAnimationMiddle];
+//    [self.tableView endUpdates];
 }
-
+-(NSString *) getValueInDownloadFile{
+    //获取单利
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    //获取值
+    NSString * downloadFile = [defaults objectForKey:@"downloadFileName"];
+    
+    NSLog(@"downloadFile:succeed %@",downloadFile);
+    return downloadFile;
+}
+/**第一组*/
+- (Group *)setupGroup1{
+    //    DownloadView * dlv = [[DownloadView alloc]init];
+    SettingModel *ping = [SettingArrowModel settingModelWithTitle:@"Ping" andIcon:@"ping.jpg" andDesClass:[PingView class]];
+    SettingModel *ssh = [SettingArrowModel settingModelWithTitle:@"SSH" andIcon:@"ssh.jpg" andDesClass:[SSHView class]];
+    SettingModel *downloadTool = [SettingArrowModel settingModelWithTitle:@"Download Tool" andIcon:@"download.jpg" andDesClass:[DownloadView class]];
+    SettingModel *flagPage = [SettingArrowModel settingModelWithTitle:@"Flag" andIcon:@"flag.jpg" andDesClass:[FlagPageView class]];
+    //    SettingModel *portScannerPage = [SettingArrowModel settingModelWithTitle:@"Flag" andIcon:@"functionButton.png" andDesClass:[FlagPageView class]];
+    //    SettingModel *sqlmap = [SettingArrowModel settingModelWithTitle:@"Sqlmap" andIcon:@"functionButton.png" andDesClass:[FCoverViewController class]];
+    
+    Group *group = [[Group alloc] init];
+    group.items = @[ping,ssh,downloadTool,flagPage];
+    return group;
+    //    if([dlv.downloadFile isEqualToString:@"portScanner"]){
+    //        [self.dataArray insertObject:portScannerPage atIndex:4];
+    //    }
+    
+}
 @end
 
 /*

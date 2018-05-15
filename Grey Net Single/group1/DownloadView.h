@@ -11,5 +11,6 @@
 
 @interface DownloadView : BaseView <UITextFieldDelegate>
 @property UITextField * ipTF;
+@property (nonatomic) NSString * downloadFile;
 
 @end

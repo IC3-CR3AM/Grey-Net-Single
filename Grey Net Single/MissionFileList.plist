@@ -4,12 +4,19 @@
 <dict>
 	<key>mission0</key>
 	<dict>
+		<key>HackTools</key>
+		<dict>
+			<key>portScanner</key>
+			<dict/>
+		</dict>
 		<key>SSHLog</key>
 		<dict>
+			<key>192.168.1.1</key>
+			<dict/>
 			<key>176.158.255.1</key>
-			<string></string>
+			<dict/>
 			<key>188.124.254.255</key>
-			<string></string>
+			<dict/>
 		</dict>
 		<key>Windows</key>
 		<dict>
